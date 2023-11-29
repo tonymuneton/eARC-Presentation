@@ -1,5 +1,5 @@
 #pdf-canvas {
-    max-width: 100%; /* Ensure it doesn't overflow the page */
+    max-width: 65%; /* Ensure it doesn't overflow the page */
     height: auto; /* Adjust height automatically */
     border: none; /* Remove border */
     margin: 0 auto; /* Center the canvas */
@@ -12,7 +12,7 @@
     padding: 5px; /* Padding for the container */
     margin: 50px auto 20px; /* Increased top margin to create space */
     box-shadow: 0 0px 20px rgba(0, 0, 0, 0.1); /* Box-shadow for a subtle depth effect */
-    width: 50%; /* Adjust the width as needed */
+    width: 47%; /* Adjust the width as needed */
   }
   
   #pdf-viewer-container {
@@ -28,6 +28,7 @@
     text-align: center; /* Center the controls under the PDF viewer */
     padding: 1rem 0; /* Padding above and below the controls */
 }
+
 
 button, #download-pdf {
     padding: 10px 20px; /* Comfortable padding inside the buttons */
