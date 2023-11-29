@@ -1,0 +1,87 @@
+/* This is the outer wrapper to create a full-height flexbox container */
+html, body {
+    height: 100%;
+    margin: 0;
+    background-color: #f5f5f5; /* Or any other color you prefer */
+}
+.login-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Aligns the children to the start of the cross axis */
+    min-height: 60vh; /* 100% of the viewport height */
+    background-color: #f5f5f5; /* Optional: color for the background of the login page */
+    padding-right: 120px;
+}
+
+/* This is the styling for the login form itself */
+.login-form {
+    background-color: #ffffff; /* White background for the form */
+    padding: 2rem; /* Spacing inside the form */
+    border-radius: 5px; /* Rounded corners for the form */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* A subtle shadow around the form */
+    width: 100%; /* Full width */
+    max-width: 400px; /* Maximum width the form can take */
+    margin: auto; /* Centers the form in the flex container */
+    
+}
+
+.login-form h2 {
+    text-align: center; /* Center the heading text */
+    margin-bottom: 1rem; /* Space below the heading */
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    width: 100%; /* Full width */
+    padding: 0.75rem; /* Padding inside the input fields */
+    margin-bottom: 1rem; /* Space between each field */
+    border: 1px solid #ddd; /* Border color */
+    border-radius: 4px; /* Slightly rounded borders for the input fields */
+}
+
+/* Styling for the 'Remember my username' checkbox */
+.login-form .remember-me {
+    margin-bottom: 1rem; /* Space below the checkbox */
+}
+
+/* Styling for the login button */
+.login-button {
+    width: 100%; /* Full width */
+    padding: 0.75rem; /* Padding inside the button */
+    border: none; /* No border */
+    border-radius: 4px; /* Slightly rounded borders for the button */
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    font-size: 1rem; /* Font size for the text inside the button */
+    margin-bottom: 1rem; /* Space below the button */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.login-button:hover {
+    background-color: #45a049; /* Darker shade of green on hover */
+}
+
+/* Links under the form */
+.login-form a {
+    display: block; /* Display links as block to occupy full width */
+    text-align: center; /* Center the text */
+    margin-bottom: 0.5rem; /* Space between the links */
+    color: #0066cc; /* Color of the links */
+    text-decoration: none; /* No underline on the links */
+}
+
+.login-form a:hover {
+    text-decoration: underline; /* Underline on hover for better accessibility */
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+    .login-form {
+        width: 90%; /* Slightly less width on small screens */
+        padding: 1rem; /* Less padding on small screens */
+    }
+
+    .login-wrapper {
+        padding-top: 20px; /* Less space on the top on small screens */
+    }
+}

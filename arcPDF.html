@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="arcPDF.css">
+
+    <!-- Include PDF.js library -->
+    <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.8.335/pdf.min.js"></script>
+    <link href="https://db.onlinewebfonts.com/c/7150534f1c3c68d8ed34eb3090c126b3?family=Futura+Regular" rel="stylesheet">
+    <link href="https://db.onlinewebfonts.com/c/4174065a2c851d5a0a19d2856304dea9?family=Futura-Medium" rel="stylesheet">
+    <link href="https://db.onlinewebfonts.com/c/9ab8abd11c40ee5c8d1905f9c9cb9ac8?family=Futura+Bold" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="header-link">
+                <div class="logo">
+                    <img src="images/AFB-log.png" alt="eARC Logo" class="logo-img">
+                </div>
+                <span class="logo-text">eARC</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="arcPDF.html" id="eARC-pdf">ARC PDF</a></li>
+                    <li><a href="aboutpage.html" id="about-eARC">About eARC</a></li>
+                    <li><a href="dashboard.html" class="active">Dashboard</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div id="pdf-container">
+        <div id="pdf-viewer-container">
+            <canvas id="pdf-canvas"></canvas>
+        </div>
+        <div id="pdf-controls">
+            <button id="prev-page">Previous Page</button>
+            <span id="page-info">Page <span id="page-num"></span> of <span id="page-count"></span></span>
+            <button id="next-page">Next Page</button>
+            <a href="#" id="download-pdf">Download PDF</a>
+        </div>
+    </div>
+
+    <script>
+        // Initialize and load the PDF
+     // Initialize and load the PDF
+let pdfDoc = null,
+    pageNum = 1,
+    pageIsRendering = false,
+    pageNumIsPending = null;
+
+const canvas = document.getElementById('pdf-canvas'),
+      ctx = canvas.getContext('2d');
+
+// Load a PDF document
+pdfjsLib.getDocument('images/ARC.pdf').promise.then(pdfDoc_ => {
+    pdfDoc = pdfDoc_;
+    document.getElementById('page-count').textContent = pdfDoc.numPages;
+    renderPage(pageNum);
+});
+
+// Render the page
+const renderPage = num => {
+    pageIsRendering = true;
+
+    // Get page
+    pdfDoc.getPage(num).then(page => {
+        const viewport = page.getViewport({ scale: 1.5 });
+        canvas.height = viewport.height;
+        canvas.width = viewport.width;
+
+        const renderCtx = {
+            canvasContext: ctx,
+            viewport
+        };
+
+        page.render(renderCtx).promise.then(() => {
+            pageIsRendering = false;
+
+            if (pageNumIsPending !== null) {
+                renderPage(pageNumIsPending);
+                pageNumIsPending = null;
+            }
+        });
+
+        // Output current page
+        document.getElementById('page-num').textContent = num;
+    });
+};
+
+// Check for pages rendering
+const queueRenderPage = num => {
+    if (pageIsRendering) {
+        pageNumIsPending = num;
+    } else {
+        renderPage(num);
+    }
+};
+
+// Show Prev Page
+document.getElementById('prev-page').addEventListener('click', () => {
+    if (pageNum <= 1) {
+        return;
+    }
+    pageNum--;
+    queueRenderPage(pageNum);
+});
+
+// Show Next Page
+document.getElementById('next-page').addEventListener('click', () => {
+    if (pageNum >= pdfDoc.numPages) {
+        return;
+    }
+    pageNum++;
+    queueRenderPage(pageNum);
+});
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+#pdf-canvas {
+    max-width: 100%; /* Ensure it doesn't overflow the page */
+    height: auto; /* Adjust height automatically */
+    border: none; /* Remove border */
+    margin: 0 auto; /* Center the canvas */
+    display: block; /* Ensure it is treated as a block-level element */
+}
+
+#pdf-container {
+    background-color: white; /* Light grey background */
+    border-radius: 5px; /* Rounded corners */
+    padding: 5px; /* Padding for the container */
+    margin: 50px auto 20px; /* Increased top margin to create space */
+    box-shadow: 0 0px 20px rgba(0, 0, 0, 0.1); /* Box-shadow for a subtle depth effect */
+    width: 50%; /* Adjust the width as needed */
+  }
+  
+  #pdf-viewer-container {
+    margin-bottom: 20px; /* Space between the PDF viewer and the controls */
+    max-width: 100%; /* Ensure it doesn't overflow the page */
+    height: auto; /* Adjust height automatically */
+    border: none; /* Remove border */
+    margin: 0 auto; /* Center the canvas */
+    display: block; 
+  }
+  
+  #pdf-controls {
+    text-align: center; /* Center the controls under the PDF viewer */
+    padding: 1rem 0; /* Padding above and below the controls */
+}
+
+button, #download-pdf {
+    padding: 10px 20px; /* Comfortable padding inside the buttons */
+    margin: 0 10px; /* Space between buttons */
+    border: none; /* No border for a modern look */
+    border-radius: 5px; /* Slightly rounded corners for the buttons */
+    background-color: #003366; /* Deep navy blue background for buttons */
+    color: #ffffff; /* White text for contrast */
+    font-weight: bold; /* Make the text a bit bolder */
+    text-transform: uppercase; /* Uppercase text for a more button-like appearance */
+    letter-spacing: 1px; /* Spacing between letters for readability */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    cursor: pointer; /* Pointer cursor to indicate clickability */
+}
+  
+button:hover, #download-pdf:hover {
+    background-color: #002244; /* A darker shade of navy blue for the hover state */
+}
+
+#download-pdf {
+    background-color: #003366; /* Deep navy blue background for buttons */
+    color: white; /* White text color */
+    text-decoration: none; /* Remove underline from links */
+    cursor: pointer; /* Hand cursor for clickable items */
+}
+
+#download-pdf:hover {
+    background-color: #217a34; /* A darker green for hover state */
+}
+html, body {
+   
+    background-color: #fafafa; /* Slightly lighter than #f5f5f5 */
+}

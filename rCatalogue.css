@@ -1,0 +1,120 @@
+.scrollable-table-container {
+    max-height: 80vh; /* Use viewport height to make it responsive */
+    overflow-y: auto;
+    width: 75%;
+    margin: 5vh auto;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.H-resource {
+    text-align: center;
+    position: relative; /* To control z-index */
+}
+.H-resource h1 {
+    background-color: #fff;
+    padding: 1.25rem;
+    position: relative; /* Instead of absolute */
+    z-index: 1;
+    font-size: 2.5rem;
+    width: 100%; /* Ensure it spans the width of its container */
+    text-align: center; /* Center the text */
+}
+.resource-catalogue-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-collapse: separate; /* Use 'separate' to handle borders for individual cells */
+    border-spacing: 0; /* Removes the spacing between borders */
+}
+
+th {
+    background-color: #FDD835; /* Yellow background for header */
+    color: #333; /* Dark gray text */
+    font-family: 'Futura', sans-serif;
+    padding: 12px 15px;
+    border-bottom: 2px solid #E0E0E0;
+    font-size: 15px;
+}
+
+td {
+    padding: 12px 15px;
+    color: #333;
+    border-bottom: 1px solid #E0E0E0;
+}
+th, td {
+    padding: 12px 15px; /* Adjust padding as needed */
+    text-align: left;
+    border-left: 1px solid #333; /* Adds a border to the left of each cell */
+    border-bottom: 1px solid #333; /* Keeps the existing bottom border */
+}
+
+/* You may also need to remove the border from the first cell of each row to prevent a double border where the table starts */
+th:first-child, td:first-child {
+    border-left: none;
+}
+
+/* To prevent a double border on the right of the last cell, you can add this */
+th:last-child, td:last-child {
+    border-right: 1px solid #ddd;
+}
+
+/* Zebra striping for rows */
+tbody tr:nth-child(even) {
+    background-color: #FAFAFA; /* Light gray for even rows */
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #FFF; /* White for odd rows */
+}
+
+tbody tr:hover {
+    background-color: #FFF8E1; /* Light yellow for hover */
+}
+.download-button {
+    text-align: center;
+    margin-top: 2rem; /* Use relative units */
+}
+
+.download-button button {
+    background-color: #333;
+    color: #fff;
+    padding: 1.25rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: inline-block; /* Change to inline-block for better control */
+}
+
+
+.download-button button:hover {
+    background-color: #555; /* Darker gray on hover */
+}
+
+/* Responsive table adjustments */
+@media screen and (max-width: 600px) {
+    .scrollable-table-container {
+        width: 95%;
+        margin: 5vh auto;
+        max-height: none;
+    }
+    
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+    
+    .H-resource h1 {
+        font-size: 2rem; /* Adjust the font size for smaller screens */
+    }
+}

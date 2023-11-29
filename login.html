@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eARC Homepage</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="login.css">
+    <link href="https://db.onlinewebfonts.com/c/7150534f1c3c68d8ed34eb3090c126b3?family=Futura+Regular" rel="stylesheet">
+    <link href="https://db.onlinewebfonts.com/c/4174065a2c851d5a0a19d2856304dea9?family=Futura-Medium" rel="stylesheet">
+    <link href="https://db.onlinewebfonts.com/c/9ab8abd11c40ee5c8d1905f9c9cb9ac8?family=Futura+Bold" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="header-link">
+                <div class="logo">
+                    <img src="images/AFB-log.png" alt="eARC Logo" class="logo-img">
+                </div>
+                <span class="logo-text">eARC</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="arcPDF.html" id="eARC-pdf">ARC PDF</a></li>
+                    <li><a href="aboutpage.html" id="about-eARC">About eARC</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+        <div class="login-wrapper">
+            <div class="login-form">
+                <h2>Log in</h2>
+                <form action="submit-login.php" method="post">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+    
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+    
+                    <div class="remember-me">
+                        <input type="checkbox" id="remember-me" name="remember-me">
+                        <label for="remember-me">Remember my username</label>
+                    </div>
+    
+                    <button type="submit" class="login-button">Log in</button>
+    
+                    <a href="#" class="forgot-link">Forgot username or password?</a>
+                    <p class="sign-up-text">New to eARC? <a href="#" class="sign-up-link">Open an account or sign up.</a></p>
+                </form>
+            </div>
+        </div>
+</body>
+</html>

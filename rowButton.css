@@ -1,0 +1,25 @@
+.add-row-button {
+    background-color: #3CB4C7; /* Teal background */
+    color: white; /* White text */
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s;
+    outline: none;
+    margin-top: 10px;
+}
+
+.add-row-button:hover {
+    background-color: #349DA2; /* A darker shade of teal for hover effect */
+}
+
+.add-row-button:focus,
+.add-row-button:active {
+    background-color: #349DA2; /* Keep the same color on focus */
+}
+
+.add-row-button:active {
+    transform: translateY(2px);
+}

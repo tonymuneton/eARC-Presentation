@@ -1,0 +1,2619 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>eARC - ARC Form</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="rowButton.css">
+    <link rel="stylesheet" href="arcform-styles.css?v=1.1">
+    <script src="addRowFunctionality.js"></script>
+    <link rel="stylesheet" href="arc-1-styles.css"> <!-- New stylesheet for ARC 1 -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <script src="arcform-scripts.js" defer></script>
+    <script src="reference-number-script.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.2/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="submit.js" defer></script>
+    <link href="https://db.onlinewebfonts.com/c/7150534f1c3c68d8ed34eb3090c126b3?family=Futura+Regular" rel="stylesheet">
+    <link href="https://db.onlinewebfonts.com/c/e15e04d5b8ea210a0a98596732a32871?family=Futura-Normal" rel="stylesheet">
+    <link href="https://db.onlinewebfonts.com/c/4174065a2c851d5a0a19d2856304dea9?family=Futura-Medium" rel="stylesheet">
+    <link href="https://db.onlinewebfonts.com/c/9ab8abd11c40ee5c8d1905f9c9cb9ac8?family=Futura+Bold" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link href="https://db.onlinewebfonts.com/c/04bb3f9a7e8470f6e50a49b64000770d?family=Futura+Windows" rel="stylesheet">
+
+
+
+
+
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="header-link">
+                <div class="logo">
+                    <img src="images/AFB-log.png" alt="eARC Logo" class="logo-img">
+                </div>
+                <span class="logo-text">eARC</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="arcPDF.html" id="eARC-pdf">ARC PDF</a></li>
+                    <li><a href="aboutpage.html" id="about-eARC">About eARC</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div id="arc-form-content" class="arc-form-content">
+
+        <!-- Sidebar navigation -->
+        <div class="sidebar">
+            <ul>
+                <li data-target="welcome-content">Welcome</li>
+                <li class="collapsible">
+                    <span class="arc-guidelines" data-target="arc-guidelines-content">ARC Guidelines</span>
+                    <!-- clickable text -->
+                    <span class="arrow">&#9662;</span>
+                    <ul class="content">
+                        <li data-target="page-1-content">Page 1</li>
+                        <li data-target="page-2-content">Page 2</li>
+                        <li data-target="page-3-content">Page 3</li>
+                        <li data-target="page-4-content">Page 4</li>
+                        <li data-target="page-5-content">Page 5</li>
+                    </ul>
+                </li>
+                <li class="collapsible">
+                    <span class="arc-section">ARC 1</span>
+                    <!-- clickable text -->
+                    <span class="arrow">&#9662;</span>
+                    <ul class="content">
+                        <li data-target="step1-content">Statement of Agreement</li>
+                        <li data-target="step2-content">Mission Info P.1</li>
+                        <li data-target="step3-content">Mission Info P.2</li>
+                        <li data-target="step4-content">Unit Information</li>
+                        <li data-target="step5-content">Air Movements P.1</li>
+                        <li data-target="step6-content">Air Movements P.2</li>
+                        <li data-target="step7-content">Air Movements P.3</li>
+                        <li data-target="step8-content">Commercial Travel</li>
+                        <li data-target="step9-content">Weather / Security Req</li>
+                        <li data-target="step10-content">Weapons Info / Sea Movements</li>
+                        <li data-target="step11-content">Lodging Req</li>
+                        <li data-target="step12-content">Food Req</li>
+                        <li data-target="step13-content">Facilities for rent</li>
+                        <li data-target="step14-content">Facility Req</li>
+                        <li data-target="step15-content">Maintenance</li>
+                        <li data-target="step16-content">AGE / GSE</li>
+                        <li data-target="step17-content">Munitions/Ordnance Req P.1</li>
+                        <li data-target="step18-content">Munitions/Ordnance Req P.2</li>
+                        <li data-target="step19-content">Transportation Req</li>
+                        <li data-target="step20-content">Vehicle Request</li>
+                        <li data-target="step21-content">Communication Req</li>
+                        <li data-target="step22-content">Intelligence / Financial Req</li>
+                        <li data-target="step23-content">Contracting Req</li>
+                        <li data-target="step24-content">Local Rental Car Companies</li>
+                        <li data-target="step25-content">Portable Office Space</li>
+                        <li data-target="step26-content">Civil Engineering Req</li>
+                        <li data-target="step27-content">Supply Req</li>
+                        <li data-target="step28-content">POL Req P.1</li>
+                        <li data-target="step29-content">POL Req P.2</li>
+                        <li data-target="step30-content">Medical Req</li>
+                        <li data-target="step31-content">Augmentation Req</li>
+                        <li data-target="step32-content">Training Site / Flight line photo</li>
+                        <li data-target="step33-content">Redeployment Req</li>
+                        <li data-target="step34-content">Point of Contacts</li>
+                        <li data-target="step35-content">Submission Page</li>
+
+
+                        <!-- Add additional steps here if necessary -->
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+
+
+        <!-- Main content -->
+        
+            <div id="welcome-content" class="content-div" style="display:block;">
+                <h1 class="title">Welcome to the eARC Prototype</h1>
+                <p class="intro-text">
+                    Thank you for visiting the eARC platform! This version is a prototype and a work in progress. We are
+                    actively developing the eARC to improve communication and efficiency for Andersen Air Force Base
+                    personnel and partners.
+                </p>
+
+                <div class="section why-earc">
+                    <h2 class="title">Why eARC Matters</h2>
+                    <p class="intro-text">
+                        The eARC project aims to revolutionize the Andersen Reception Checklist process. By reducing
+                        email
+                        reliance and introducing a user-friendly platform, we aim to streamline communication, enhance
+                        collaboration, and save valuable time for our dedicated personnel. Your feedback and support are
+                        crucial as we work towards creating a more efficient and effective solution.
+                    </p>
+                </div>
+
+                <div class="section feedback">
+                    <h2 class="title">Your Feedback Matters</h2>
+                    <p class="intro-text">
+                        Your insights and suggestions play a vital role in shaping the future of the eARC. We welcome
+                        your
+                        feedback as we continue to refine and enhance this platform. Together, we can make a significant
+                        difference in improving operations and collaboration at Andersen Air Force Base.
+                    </p>
+                </div>
+
+                <div class="thanks-and-button">
+                    <p class="thanks">Thank you for being part of this exciting journey!</p>
+                    <a href="#" class="start-button" onclick="showArcGuidelines();">Start the ARC Form</a>
+                </div>
+
+
+            </div>
+
+            <div id="arc-guidelines-content" class="content-div" style="display:none;">
+                <h1>ANDERSEN AFB RECEPTION CHECKLIST</h1>
+                <h2>AS OF: April 2023</h2>
+                <!-- This creates a horizontal line -->
+                <p><strong>NON-US/FOREIGN UNITS</strong> request to operate on AAFB for training when invited as a
+                    participant in
+                    official US exercises. If there are no US aviation assets with thatspecific exercise on AAFB, a
+                    <strong>US LIASISON IS REQUIRED</strong>
+                    and must accompany the non-US/foreign military while they conduct all operations on
+                    AAFB including ADVON and POST deployment. The US Exercise originator is responsible to provide this
+                    liaison and fund any relevant TDY costs. This named US Liaison should be used as your POC when
+                    filling
+                    out EALs, FVRs, and flight line entry request paperwork with a current phone number and email.
+                    *A LIAISON is not required for RON or ferry flight operations.
+                </p>
+                <p>To ensure proper coordination installation support for your mission, the following checklist must be
+                    thoroughly reviewed, completed, and provided to 36 LRS Readiness Flight (36 LRS/LGRDX) 120 day
+                    out from execution. IDRC will coordinate all checklist requests for you and provide your unit with
+                    the
+                    results of the coordination process no later than (NLT) 2 weeks from the earliest indicated arrival
+                    date.
+                    All attachments referenced in this checklist are at the end of the document.
+                </p>
+
+                <p>It is the responsibility of the both the incoming units to follow up with the AAFB Reception Working
+                    Group (RWG) reps to obtain a status update on their requests. The RWG reps will work the support
+                    request at the direction of IDRC and may need to ask the incoming units specific questions about
+                    their
+                    requests, in which case they will ask the incoming units’ POCs. However, it is still the
+                    responsibility
+                    of
+                    the incoming unit to clarify all requests to the RWG reps, whether the request is unique or not.
+                </p>
+                <p>To guarantee receipt of your request, the completed reception checklist must be sent electronically
+                    to
+                    our
+                    distribution list (36wg.idrc@us.af.mil (unclassified) or 36wg.idrc@andersen.af.smil.mil
+                    (classified))
+                    with
+                    a follow-up phone call to 366-1844/2331/3464/1769. Due to some unique capabilities at AAFB, keep in
+                    mind, that if an item of support is not sufficiently indicated on the checklist, you may not receive
+                    the
+                    level
+                    of support you expect.
+                </p>
+                <p>As an additional note, the AAFB Reception Working Group (RWG) convenes weekly to discuss
+                    reception support requirements of all inbound units. We encourage visiting units to attend RWG
+                    meetings during their site visit or upon advanced party (ADVON) arrival. Please contact our office
+                    prior
+                    to arrival so we can accommodate your attendance.
+                </p>
+                <p>All units arriving on AAFB in support of contingency or AEF deployments are requested to send 36
+                    LRS/IDRC a passenger manifest as soon as one is available. This will benefit us in getting you a
+                    speedy response regarding what AAFB can give your unit while on station.
+                </p>
+                <p>The following timeline will facilitate your mission success. Many of these items are time sensitive
+                    and failure to complete them as indicated may directly affect your support.
+                </p>
+                <h3>
+                    <span style="background-color: #fff9c4;  padding: 2px 5px; display: inline;">
+                        ***Units MUST bring their own GPC cardholders to Andersen AFB for micro-purchases***
+                    </span>
+                </h3>
+
+                <p>Upon completion of your exercise, submit an After Action Report to the 36 WG/IDRC.
+                </p>
+                <button type="button" class="next-button" data-target="page-1-content">Next</button>
+
+            </div>
+
+            <!-- Content for Page 1 -->
+            <div id="page-1-content" class="content-div" style="display:none;">
+
+                <h2>NLT 150-180 DAYS PRIOR TO ARRIVAL</h2>
+                <p>
+                    All units who require changes to Andersen AFB network infrastructure MUST submit the
+                    appropriate Change Request. This includes but is not limited to connecting unit owned systems to
+                    Andersen AFB infrastructure, configuration changes, network modifications and new installations.
+                    Units are required to provide justification, make, model, serial number, MAC addresses and IP
+                    addresses (at a minimum) of all unit owned equipment requesting to be connected to Andersen AFB
+                    infrastructure. Contact 36 CS/RWG (Reception Working Group) at DSN: (315) 362-2703. COMM:
+                    (671) 362-2703 or via email 36CS.SCXP.RWG@us.af.mil for further information. COMM: (671)
+                    362-2703 or via email 36CS.SCXP.RWG@us.af.mil for further information
+                </p>
+                <h2>NLT 120-90 DAYS PRIOR TO ARRIVAL</h2>
+                <p>
+                    ATR UNITS - All completed ARCS must be submitted through USFJ PRIOR to turn into AAFB. Checklist
+                    must be
+                    completed to be as best extent as possible and sent to the 36 WG/IDRC box at 36wg.idrc@us.af.mil
+                </p>
+                <h2>NLT 90 DAYS PRIOR TO ARRIVAL</h2>
+                <p>Formulate requirements necessary for financial management and contracting support; Funding for
+                    mobile office workspace trailers required (36 OG/RA, 366-3665)
+                </p>
+                <p>USAF units for more than 60 days/non-USAF/foreign units needing AGE: Submit IMSR for
+                    WRM/AGE or MUNS assets NLT 90 days prior to arrival. Send an UNSIGNED IMSR to 36
+                    LRS/WRM box @ 36lrs.wrm@us.af.mil or 36 WG/IDRC box at 36wg.idrc@us.af.mil. IMSR must
+                    be approved by HQ/AF before unit may use them.
+                </p>
+                <p>Ensure all funding documents (MIPRs) and/or account information have been submitted to the
+                    appropriate agencies and all requirements have been submitted to 36 CONS to execute contracts.
+                </p>
+                <p>All units requesting the usage of the Pacific Readiness Training Center-Andersen(Northwest Field)
+                    must submit a comprehensive Concept of Operations and Coordination Letter to 36 CRG/XP for
+                    coordination. Send initial notification to 36CRG.XP.Planning@us.af.mil. Templates and further
+                    instructions will be provided by 36 CRG/XP upon receipt of initial request.
+                </p>
+                <h2>NLT 60 DAYS PRIOR TO ARRIVAL</h2>
+                <p>Email complete checklist to IDRC and follow-up with a phone call (addresses and numbers above)</p>
+                <p>Create and submit a Mass Account worksheet attached to account access letters; 1 per unit to
+                    36 CS/RWG</p>
+                <p>Funding documentation for all foreign visitors/ACSA’s. An appointment letter to handle and sign
+                    MLS forms on behalf of the country must be signed by a command headquarters prior to arrival. (36
+                    LRS/LGRDX, 366-6583)</p>
+                <p>USAF Units: Submit IMSR for WRM/AGE/MUNS assets NLT 60 days prior to arrival. Send an
+                    UNSIGNED IMSR to 36 LRS/WRM box @ 36lrs.wrm@us.af.mil or 36 WG/IDRC box at
+                    36wg.idrc@us.af.mil. IMSR must be approved by WRMPM before unit may use them.</p>
+                <p>to inform them of initial transportation needs and to complete an Statement of Work (SOW).
+                This includes transportation of cargo upon arrival/departure and transportation of PAX during your
+                stay at Andersen. (366-2033/2294/5854/3739) (36lrs.lgrp@us.af.mil)</p>
+                <p>Foreign nations under the Acquisition and Cross Servicing Agreement (ACSA) program must
+                    submit a Mutual Logistics Support (MLS) form for services requested for services to be received. At
+                    the end of the visit charges will be ascertained and MLS will be authenticated with the ACSA
+                    managers on base. POC’s: Charles E. Kucharski (charles.kucharski@us.af.mil) DSN: 366-6583.</p>
+
+                <button type="button" class="prev-button" data-target="arc-guidelines-content">Previous</button>
+                <button type="button" class="next-button" data-target="page-2-content">Next</button>
+            </div>
+
+
+            <!-- Content for Page 2 -->
+            <div id="page-2-content" class="content-div">
+
+                <h2>NLT 30 DAYS PRIOR TO ARRIVAL</h2>
+
+                <p>Contact IDRC for current status of checklist requests</p>
+                <p>Provide IDRC with passenger manifest ASAP if on AAFB for contingency support</p>
+                <p>For all reservations, Andersen AFB Lodging requires incoming units to submit a list of occupant
+                    NAMES.
+                    Without info, check-in may not be possible depending on hotel. (Template for lodging is on page 17,
+                    along with email address for submission)(36 FSS/SVML, 362-5511 or 362-5801)</p>
+                <p>Foreign Visitors Request (FVR)/Information Protection (36 WG/IP, 366-5108) <a
+                        href="mailto:36sfs.vcc@us.af.mil">36sfs.vcc@us.af.mil</a> <a
+                        href="mailto:36wg.ip.1@us.af.mil">36wg.ip.1@us.af.mil</a></p>
+                <p>Restricted area Entry Authorization List memo (36 OSS/OSAM, 366-4188/1010); send all EALs to <a
+                        href="mailto:360SS.CSS@us.af.mil">360SS.CSS@us.af.mil</a> OSS/CC is the approval authority for
+                    the
+                    airfield, WOC and Tropicana.</p>
+                <p>Flying Units -Patriot Excalibur (PEX) support (36 OSS/OSX, 366-3016/5221/2823, Cell: 671-487-7840)
+                </p>
+                <p>Aircrew Flight Equipment (AFE, Army ALSE, Navy PR) NCOICs contact 36 OSS/OSXL for requirements,
+                    deliverables, and turn-over/initiation of programs (CA/CRL and Munitions) (36 OSS/OSXL, DSN:
+                    366-1752)
+                </p>
+                <p>Andy South/Northwest Field coordination memos (36 CRG, 366-2128)</p>
+                <p>Vehicle Control Officer Letter (Contract Trans, 366-2021/Contract QA (36 LRS/LGRS, 366-2294/4307))
+                </p>
+                <p>All units that will have an aircraft maintenance support element regardless of size are required to
+                    review and comply with the Andersen Maintenance Reception Guide, attached to the Reference section
+                    in
+                    this ARC.</p>
+                <p>Munitions Storage Agreement (36 MUNS/MXWCC, 366-5166/4925/36muns.storage@us.af.mil)</p>
+                <p>Munitions Entry Authorization Listing (36 MUNS/MXWKA, 366-6300/36muns-control@us.af.mil)</p>
+                <p>Units requiring Fuel Cell Maintenance must provide a Master Entry Plan, Special Cert Roster, and
+                    respirator fit test to 36 WG Safety and 36 MXS Accessories Flight (36 WG Safety, 366-7233/36 MXS
+                    Accessories, 366-3159)</p>
+                <p>Units requesting Special Use Airspace (SUA: ATCAA, Military Training Route (IR-983), Warning Areas
+                    (W-11,
+                    W-12, W-13, W-517), and/or Restricted Areas (R-7201 aka FDM)) require a DCAST account. Organizations
+                    that intend to conduct training in the Mariana Islands Training and Testing Area, Mariana Islands
+                    Range
+                    Complex Special Use Airspace Areas, or the Land-Based Training Areas on Guam or the Commonwealth of
+                    the
+                    Northern Mariana Islands must review the references on the MIRC Range page located on the Data
+                    Collection and Scheduling Tool (DCAST) webpage and contact MIRC OPS for coordination and approvals.
+                    For
+                    ground or air training on Northwest Field on Andersen AFB contact <a
+                        href="mailto:36crg.xp.planning@us.af.mil">36crg.xp.planning@us.af.mil</a>.</p>
+                <p>Follow-up on all funding documents (MIPRs), purchases, and contracts are in place through the
+                    appropriate
+                    agencies to meet your need dates.</p>
+                <p>Funding documentation for all foreign visitors/ACSA’s (36 LRS/LGRDX, 366-1769)</p>
+                <p>Visiting unit financial POC has access to USAF Financial Management Systems if staying for more than
+                    180
+                    days (36 CPTS/FMA, <a href="mailto:36cpts.fma@us.af.mil">36cpts.fma@us.af.mil</a>, 366-5887)</p>
+
+
+
+
+
+                <!-- Pagination Controls -->
+                <nav class="pagination-controls">
+                    <button type="button" class="prev-button" data-target="page-1-content">Previous</button>
+                    <button type="button" class="next-button" data-target="page-3-content">Next</button>
+                </nav>
+            </div>
+
+
+
+            <!-- Content for Page 3 but this a continued version of page 2  -->
+
+            <div id="page-3-content" class="content-div">
+
+                <h2>NLT 30 DAYS PRIOR TO ARRIVAL (Continued)</h2>
+
+                <p>Contact IDRC for current status of checklist requests</p>
+                <p>Provide IDRC with passenger manifest ASAP if on AAFB for contingency support</p>
+                <p>For all reservations, Andersen AFB Lodging requires incoming units to submit a list of occupant
+                    NAMES.
+                    Without info, check-in may not be possible depending on hotel. (Template for lodging is on page 17,
+                    along with email address for submission)(36 FSS/SVML, 362-5511 or 362-5801)</p>
+                <p>Foreign Visitors Request (FVR)/Information Protection (36 WG/IP, 366-5108) <a
+                        href="mailto:36sfs.vcc@us.af.mil">36sfs.vcc@us.af.mil</a> <a
+                        href="mailto:36wg.ip.1@us.af.mil">36wg.ip.1@us.af.mil</a></p>
+                <p>Restricted area Entry Authorization List memo (36 OSS/OSAM, 366-4188/1010); send all EALs to <a
+                        href="mailto:360SS.CSS@us.af.mil">360SS.CSS@us.af.mil</a> OSS/CC is the approval authority for
+                    the
+                    airfield, WOC and Tropicana.</p>
+                <p>Flying Units -Patriot Excalibur (PEX) support (36 OSS/OSX, 366-3016/5221/2823, Cell: 671-487-7840)
+                </p>
+                <p>Aircrew Flight Equipment (AFE, Army ALSE, Navy PR) NCOICs contact 36 OSS/OSXL for requirements,
+                    deliverables, and turn-over/initiation of programs (CA/CRL and Munitions) (36 OSS/OSXL, DSN:
+                    366-1752)
+                </p>
+                <p>Andy South/Northwest Field coordination memos (36 CRG, 366-2128)</p>
+
+
+
+                <!-- Instructions Section -->
+                <section class="page2-instructions">
+                    <p>
+                        Naval Facilities Engineering Command (NAVFAC) Marianas. Final environmental support charges will
+                        be
+                        calculated and the unit will be refunded the amount of funds remaining or will be billed for
+                        additional charges. Please note that AAFB does not provide Hazmat lockers. Additionally, all
+                        Hazardous Material brought to AAFB must be tracked through EESOH-MIS and 36 LRS/Invicta Defense.
+                    </p>
+                    <ol>
+                        <li>Forward projected waste streams and quantities to AAFB Hazardous Waste Program Manager and
+                            Alternates via email for cost estimates (see below for contact information).</li>
+                        <li>Funding requests for approved hazardous waste cost estimates and associated funding
+                            documents
+                            are initiated and routed through ieFACMAN eTracker. Funding for HW support must be accepted
+                            prior to services.</li>
+                        <li>Once the funding document is approved, please contact LMS Hazwaste Operations by phone at
+                            339-2422/2429 or via email to LMSHW@LMSFM.com to coordinate the setup of an initial
+                            accumulation
+                            point, receive waste disposal forms, and submit copies of hazardous waste training
+                            certificates.
+                        </li>
+                    </ol>
+                </section>
+
+                <!-- Pagination Controls -->
+                <nav class="pagination-controls">
+                    <button type="button" class="prev-button" data-target="page-2-content">Previous</button>
+                    <button type="button" class="next-button" data-target="page-4-content">Next</button>
+                </nav>
+            </div>
+
+
+
+            <!-- Content for Page 4 -->
+
+            <div id="page-4-content" class="content-div" style="display:none;">
+                <h2>NLT 15 DAYS PRIOR TO ARRIVAL</h2>
+                <p>Contact IDRC for current status of checklist requests.</p>
+                <p>Provide Airfield Drivers list. (36 OSS/OSAM, 36OSS.OSA.AMOPS@us.af.mil , 366-4188)
+                    *Identify who will require CMA (runway) access*</p>
+                <p>Verify with 36 CONS that contracted requirements have been awarded.</p>
+                <p>Contact Airfield Management and submit Flight Planning LOA/Information.
+                    (36 OSS/OSAA, Bldg 17002; 36OSS.OSA.AMOPS@us.af.mil or 366-4188)</p>
+                <p>Contact the IDRC to notify them of when your PAX/ Cargo aircraft will be coming in. The IDRC
+                    will create a Reception Schedule of Events (RSOE) worksheet to notify the RWG reps and those
+                    with a need to know to assist you upon arrival. (366-1300)
+                    Any transportation requirements coordinate transportation with VOPS. Please provide a pickup and
+                    drop-off location, and a POC to sign off for the cargo. Trans will not be able to transport cargo
+                    without a POC to sign forms. (366-2239)</p>
+                <h2>NLT 5 DAYS PRIOR TO ARRIVAL</h2>
+                <p>Email ADVON/main body travel itineraries to LGRDX.</p>
+                <p>Provide IDRC with final mission info and transportation requirements (bus, forklift, flatbed, etc.).
+                </p>
+                <p>Provide final load plans to IDRC via email (366-1300)</p>
+                <p>Provide final passenger manifests to IDRC via email (366-1300)</p>
+                <p>Contact 734th Air Mobility Squadron (AMS) Capability Forecasting (366-6055) NLT 48 hrs prior
+                    to arrival (only for units transporting explosives).</p>
+                <p>Units must be able to provide reflective belts to all of their personnel who will be working during
+                    periods of reduced visibility (i.e. inclement weather, and hours of darkness, etc.).</p>
+
+                <button type="button" class="prev-button" data-target="page-3-content">Previous</button>
+                <button type="button" class="next-button" data-target="page-5-content">Next</button>
+
+            </div>
+
+            <!-- Page 5 -->
+            <div id="page-5-content" class="content-div" style="display:none;">
+                <h1>UPON ADVON ARRIVAL</h1>
+                <p><strong>PERSCO In-processing:</strong> All deployed and/or TDY personnel (regardless of branch of
+                    service
+                    or
+                    country) are required to process through 36 FSS/PERSCO upon arrival. The Unit POC must contact
+                    PERSCO to attend the next In-Processing Brief. During exercises, PERSCO briefing times will be
+                    annotated on the applicable reporting instructions. Personnel will need a copy of their orders,
+                    mobility folder, AF Form 245, and ID Card.</p>
+                <h2>Contact Information:</h2>
+                <p><strong>NIPR Email:</strong> <a href="mailto:36fss.persco@us.af.mil">36fss.persco@us.af.mil</a></p>
+                <p><strong>PERSCO Phone:</strong> DSN: 315-366-5195/3152 or Comm. Cell: 671-688-2942</p>
+                <p><strong>Location:</strong> Building 22026, Room 155</p>
+                <p>Visit 36 LRS/IDRC in Bldg 17000 and receive RWG slides and Andersen AFB ADVON checklist.</p>
+                <p>Finalize plans for beddown, reception briefings, airfield driver training, weather/METOC
+                    integration, facility/key issuance, vehicles, support equipment, etc.</p>
+                <p>If an account for hazardous waste support has been established with NAVFAC Marianas, please
+                    contact LMS Hazwaste Operations at (671) 339-2422/2419 or email LMSHW@LMSFM.com to
+                    coordinate set up of hazardous waste accumulation point, receive waste disposal forms, and submit
+                    copies of hazwaste training certificates</p>
+                <p>Appoint Flight/Ground/Weapons Safety Representative as applicable (Bldg 23003/Rm 121; 366-
+                    7233)</p>
+                <p>For all units scheduled to be on island for more than 30 days, the senior enlisted leader needs to
+                    schedule a meeting with the 36 Wg Command Chief by contacting the WG Staff at
+                    36wg.ccce@us.af.mil or phone number 366-3089</p>
+                <p>Medical Providers must in-process with 36 MDG SGH, SGP, Pharmacy, Laboratory and Radiology
+                    sections prior to start of practice. Any questions regarding MDG matters direct to DSN 366-4270.</p>
+
+                <nav class="page-navigation">
+                    <button type="button" class="prev-button" data-target="page-4-content">Previous</button>
+                    <button type="button" class="next-button" data-target="step1-content">Begin ARC</button>
+                </nav>
+            </div>
+
+            <div id="step1-content" class="content-div">
+                <div class="reference-number">
+                    Your Reference Number: <span></span>
+                </div>
+                <h1>STATEMENT OF AGREEMENT / UNDERSTANDING:</h1>
+                <p><strong>Funding:</strong> I understand that most support functions at Andersen AFB are limited due to
+                    minimal funding
+                    and that my unit must provide funding documents (DD form 448, MIPR) and/or account information
+                    prior to arrival. <strong>Priority support:</strong> I understand contingency operations may take
+                    precedence over
+                    exercise operations, and some services previously agreed upon may be adjusted to meet these
+                    requirements. <strong>Safety</strong> I will ensure all personnel employing from Andersen AFB
+                    receive a
+                    Guam local
+                    conditions safety briefing, either before departing home station or within 24 hours of arrival.
+                    <strong>Stewardship / Accountability: </strong> I will ensure all issued facilities, keys,
+                    equipment,
+                    and vehicles will be
+                    returned prior to my unit departing the installation. If loss or damage is noted upon return, I will
+                    ensure a
+                    funding document is provided for replacement or repair. Requests for changes to turn-in procedures
+                    will
+                    be coordinated in advance and will be accommodated on an as available basis. I understand my unit is
+                    responsible for the cost of damaged facilities, equipment, and vehicles.
+                </p>
+                <!-- Your form fields for step 1 -->
+                <div class="form-row">
+                    <div class="form-column">
+                        <label for="printed-rank-name">Printed Rank, Name and Unit</label>
+                        <input type="text" id="printed-rank-name" name="printedRankName" required>
+                    </div>
+                    <div class="form-column">
+                        <label for="signature">Signature (/signed, initials, date/):</label>
+                        <input type="text" id="signature" name="signature" required>
+                    </div>
+                </div>
+                <button type="button" class="prev-button" data-target="page-5-content">Previous</button>
+                <button type="button" class="next-button" data-target="step2-content">Save & Continue</button>
+            </div>
+
+
+
+            <div id="step2-content" class="content-div">
+                <div class="reference-number">
+                    Your Reference Number: <span></span>
+                </div>
+                <!-- Step 2 content -->
+                <h1>MISSION INFORMATION</h1>
+                <p>Identify the proper name of your mission and/or your unit designator. To expedite
+                    customer support, please include this title in all future correspondence and phone calls.</p>
+                <label for="mission-unit-name">Mission / Unit Name</label>
+                <input type="text" id="mission-unit-name" name="missionUnitName" required>
+
+                <p>Please be thorough in your description. This information is key to prioritizing
+                    requirements and overall processing. If the concept of operations is classified, please
+                    forward it via the classified email address listed previously.</p>
+                <label for="concept-operations">Concept of Operations</label>
+                <input type="text" id="concept-operations" name="concept-operations" required>
+
+                <label for="number-of-aircraft">Number and Type of Aircraft</label>
+                <input type="text" id="number-of-aircraft" name="number-of-aircraft" required>
+                <div class="form-navigation-buttons">
+                <button type="button" class="prev-button" data-target="step1-content">Previous</button>
+                <button type="button" class="next-button" data-target="step3-content">Save &amp; Continue</button>
+                </div>
+            </div>
+
+
+
+
+            <div id="step3-content" class="content-div">
+                <div class="reference-number">
+                    Your Reference Number: <span></span>
+                </div>
+                <h1 class="form-heading">MISSION INFORMATION</h1>
+
+                <!-- Number of Personnel -->
+                <div class="form-row">
+                    <div class="form-column">
+                        <label for="advon-personnel">ADVON:</label>
+                        <input type="number" id="advon-personnel" name="advon-personnel" required>
+                    </div>
+                    <div class="form-column">
+                        <label for="mainbody-personnel">MAIN BODY:</label>
+                        <input type="number" id="mainbody-personnel" name="mainbody-personnel" required>
+                    </div>
+                </div>
+
+                <!-- Dates -->
+                <div class="form-dates-row">
+                    <h3 class="form-dates-heading">Dates</h3>
+                    <div class="form-dates-column">
+                        <label for="planning-conference">Planning Conference:</label>
+                        <input type="date" id="planning-conference" name="planning-conference">
+
+                        <label for="site-visit-survey">Site Visit/Survey:</label>
+                        <input type="date" id="site-visit-survey" name="site-visit-survey">
+
+                        <label for="advon-arrival">ADVON Arrival:</label>
+                        <input type="date" id="advon-arrival" name="advon-arrival">
+
+                        <label for="aircraft-arrival">Aircraft Arrival:</label>
+                        <input type="date" id="aircraft-arrival" name="aircraft-arrival">
+
+                        <label for="main-body-arrival">Main Body Arrival:</label>
+                        <input type="date" id="main-body-arrival" name="main-body-arrival">
+
+                        <label for="official-mission-dates">Official Mission Dates:</label>
+                        <input type="date" id="official-mission-dates" name="official-mission-dates">
+
+                        <label for="departures">Departures:</label>
+                        <input type="date" id="departures" name="departures">
+
+                        <div class="form-navigation-buttons">
+                            <button type="button" class="prev-button" data-target="step2-content">Previous</button>
+                            <button type="button" class="next-button" data-target="step4-content">Save &amp; Continue</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="step4-content" class="content-div">
+                <div class="reference-number">
+                    Your Reference Number: <span></span>
+                </div>
+                <h1>UNIT INFORMATION</h1>
+
+                <table class="unit-info-table">
+                    <tr>
+                        <td>Logistics POC:</td>
+                        <td><input type="text" id="logistic-poc" name="logistic-poc"></td>
+                        <td>DSN Phone:</td>
+                        <td><input type="tel" id="logistic-phone" name="logistic-phone"></td>
+                        <td>Email Address:</td>
+                        <td><input type="email" id="logistic-email" name="logistic-email"></td>
+                    </tr>
+                    <tr>
+                        <td>Operations POC:</td>
+                        <td><input type="text" id="operations-poc" name="operations-poc"></td>
+                        <td>DSN Phone:</td>
+                        <td><input type="tel" id="operations-phone" name="operations-phone"></td>
+                        <td>Email Address:</td>
+                        <td><input type="email" id="operations-email" name="operations-email"></td>
+                    </tr>
+                    <tr>
+                        <td>Maintenance POC:</td>
+                        <td><input type="text" id="maintenance-poc" name="maintenance-poc"></td>
+                        <td>DSN Phone:</td>
+                        <td><input type="tel" id="maintenance-phone" name="maintenance-phone"></td>
+                        <td>Email Address:</td>
+                        <td><input type="email" id="maintenance-email" name="maintenance-email"></td>
+                    </tr>
+                    <tr>
+                        <td>Finance POC:</td>
+                        <td><input type="text" id="finance-poc" name="finance-poc"></td>
+                        <td>DSN Phone:</td>
+                        <td><input type="tel" id="finance-phone" name="finance-phone"></td>
+                        <td>Email Address:</td>
+                        <td><input type="email" id="finance-email" name="finance-email"></td>
+                    </tr>
+                    <tr>
+                        <td>WG/CC:</td>
+                        <td><input type="text" id="wg-cc" name="wg-cc"></td>`
+                        <td>DSN Phone:</td>
+                        <td><input type="tel" id="wg-cc-phone" name="wg-cc-phone"></td>
+                        <td>Email Address:</td>
+                        <td><input type="email" id="wg-cc-email" name="wg-cc-email"></td>
+                    </tr>
+                </table>
+
+                <div class="form-navigation-buttons">
+                    <button type="button" class="prev-button" data-target="step3-content">Previous</button>
+                    <button type="button" class="next-button" data-target="step5-content">Save &amp; Continue</button>
+                </div>
+            </div>
+            <div id="step5-content" class="content-div">
+                <div class="reference-number">
+                    Your Reference Number: <span></span>
+                </div>
+                <h1>AIR MOVEMENTS</h1>
+                <p><strong>OPS Requirements:</strong> Every unit must contact Airfield Management (366-4188, Bldg 17002)
+                    prior to
+                    arrival to request a <strong>PPR</strong> (Prior Permission Required) number and parking location.
+                    Parking areas will be
+                    pre-coordinated and assigned as close to assigned maintenance facilities as possible. Prior to
+                    conducting
+                    local flight ops, aircrews are required to receive an airfield driving and local flying environment
+                    briefing (scheduled through Airfield Operations). The mission commander is required to notify the 36
+                    WG
+                    Command Post (366-2981, Bldg 23003) by 2100L the day prior to any flight operation. The details
+                    collected are published on the wing's consolidated flight schedule and are utilized by security
+                    forces,
+                    transient alert, transportation, fuels, Afld Mngt, weather flight, USDA (Brown Tree Snake
+                    inspection),
+                    and the tower to program aircraft support.</p>
+
+                <p><strong>Civilian Aircraft</strong> All non-US military aircraft must complete an
+                    ALAN (Aircraft Landing Authorization Number) from their American
+                    Embassy prior to arrival. <strong>. Please ensure Airfield Management has
+                        received this authorization prior to your departure.</strong></p>
+                <label for="civil-permit">Civil Landing Permit Number:</label>
+                <p></p>
+                <input type="text" id="civil-permit" name="civil-permit" required>
+
+                <p><strong>Allied Military Aircraft</strong> Air Force Civil Landing Permit is required to be
+                    on file prior to arrival. Please coordinate this permit with the Pentagon at
+                    703-697-5697. Please ensure Airfield Management has received this
+                    authorization prior to departure.</p>
+                <label for="alan-number">ALAN Identification Number:</label>
+                <p></p>
+                <input type="text" id="alan-number" name="alan-number" required>
+                <div class="form-navigation-buttons">
+                    <button type="button" class="prev-button" data-target="step4-content">Previous</button>
+                    <button type="button" class="next-button" data-target="step6-content">Save &amp; Continue</button>
+                </div>
+            </div>
+
+
+            <!-- Step 6 -->
+            <div id="step6-content" class="content-div">
+                <div class="reference-number">
+                    Your Reference Number: <span></span>
+                </div>
+                <div class="form-step">
+                    <h1>AIR MOVEMENTS</h1>
+                    <h2>Mission Aircraft</h2>
+                    <!-- center the table -->
+                    <table class="basic" id="airrow1">
+                        <tr>
+                            <th>Quantity</th>
+                            <th>Type</th>
+                            <th>Arrival date/s</th>
+                            <th>Departure date/s</th>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="quantity1"></td>
+                            <td><input type="text" name="airtype"></td>
+                            <td><input type="date" name="arrivalDate1"></td>
+                            <td><input type="date" name="departureDate1"></td>
+                        </tr>
+                    </table>
+                    <button type="button" class="add-row-button" data-table="airrow1">Add Row</button>
+                    <div class="form-navigation-buttons">
+                        <button type="button" class="prev-button" data-target="step5-content">Previous</button>
+                        <button type="button" class="next-button" data-target="step7-content">Save &amp; Continue</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="step7-content" class="content-div">
+                <div class="reference-number">
+                    Your Reference Number: <span></span>
+                </div>
+                <div class="form-step">
+                    <h1>AIR MOVEMENTS</h1>
+                    <p><strong>USDA Inspection:</strong>Brown Tree Snake (BTS) inspections are mandatory IAW SECDEF
+                        guidance for all departures
+                        from Guam landing anywhere other than Guam - Contact USDA @ 671-888-5707/8 for more info. </p>
+                    <h2>Support Aircraft</h2>
+                    <table class="basic" id="airrow2">
+                        <tr>
+                            <th>Quantity</th>
+                            <th>Type</th>
+                            <th>Arrival date/s</th>
+                            <th># of PAX</th>
+                            <th># of Pallets/Increments</th>
+                            <th>Rolling Stock</th>
+                            <th>Special Handling Rqmts</th>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="quantity1"></td>
+                            <td><input type="text" name="type1"></td>
+                            <td><input type="date" name="arrivalDate1"></td>
+                            <td><input type="text" name="pax1"></td>
+                            <td><input type="text" name="pallets1"></td>
+                            <td><input type="text" name="rollingstock1"></td>
+                            <td><input type="text" name="shr1"></td>
+                        </tr>
+                    </table>
+                    <button type="button" class="add-row-button" data-table="airrow2">Add Row</button>
+                    <div class="form-navigation-buttons">
+                        <button type="button" class="prev-button" data-target="step6-content">Previous</button>
+                        <button type="button" class="next-button" data-target="step8-content">Save &amp; Continue</button>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div id="step8-content" class="content-div">
+                <div class="reference-number">
+                    Your Reference Number: <span></span>
+                </div>
+                <div class="form-step">
+                    <h1>Commercial Travel</h1>
+                    <p><strong>Cargo Movement </strong>734 AMS (ATOC 366-3125) will provide material handling equipment
+                        (MHE) for aircraft
+                        on/off loading operations. Your unit is required to provide load teams to on/off load cargo,
+                        baggage and equipment
+                        as well as secure the load under the supervision of 734 AMS and the aircraft loadmaster. 5-10
+                        personnel (depending
+                        on size of load) are required. Load teams must possess safety equipment (gloves, safety-toe
+                        boots, hearing protection,
+                        and reflective gear as required). ADVON teams are expected to manage the details of passenger
+                        and cargo bed down. </p>
+                    <table>
+                        <table class="basic" id="commercialrow">
+                            <tr>
+                                <th># of PAX</th>
+                                <th>Arrival Date</th>
+                                <th>Arrival Time</th>
+                                <th>Airline</th>
+                                <th>Flight #</th>
+                                <th>Transportation Req</th>
+                            </tr>
+                            <tr>
+                                <td><input type="text" name="pax1"></td>
+                                <td><input type="date" name="arrivalDate1"></td>
+                                <td><input type="text" name="arrivalTime1"></td>
+                                <td><input type="text" name="airline1"></td>
+                                <td><input type="text" name="flight1"></td>
+                                <td><input type="text" name="transportation1"></td>
+                            </tr>
+                        </table>
+                        <!-- button onlick  -->
+
+                    </table>
+                    <button type="button" class="add-row-button" data-table="commercialrow">Add Row</button>
+
+                    <div class="form-navigation-buttons">
+                        <button type="button" class="prev-button" data-target="step7-content">Previous</button>
+                        <button type="button" class="next-button" data-target="step9-content">Save &amp; Continue</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="step9-content" class="content-div">
+                <div class="reference-number">
+                    Your Reference Number: <span></span>
+                </div>
+                <div class="form-step">
+                    <h1>WEATHER REQUIREMENTS</h1>
+                    <p>Units requiring weather support will contact the 36 OSS/OSW (AAFB, Weather Flight -- DSN
+                        315-366-3176/1407)
+                        NLT 60 days prior to arrival to arrange required weather support. Units are required to
+                        coordinate weather
+                        support prior to arrival by either bringing their own METOC/forecasters, utilizing home-station
+                        reach back
+                        support, or arranging support with the Andersen Weather Flight. Due to manning constraints, the
+                        Andersen Weather
+                        Flight cannot guarantee flight weather briefing support. The Andersen Weather Flight will
+                        provide workspace,
+                        computer, printer, and access to weather satellites and radar for TDY Weather Personnel.</p>
+                    <h1>SECURITY REQUIREMENTS</h1>
+                    <p> <strong>Security Support: </strong>36 SFS can support day-to-day operations on AAFB, PL2 and/or
+                        PL3 security is <strong>NOT</strong> organically
+                        available from the 36 WG. Requesting units must provide home-station security in the form of
+                        <strong>Augmentees</strong> or
+                        accept risk of only periodic SF checks on deployed aircraft. <strong>Augmentees required are: 12
+                            Augmentees per every
+                            PL2 and/or PL3 asset.</strong> Please identify the number of Augmentees in the Augmentation
+                        Requirements section found below.</p>
+                    <table class="basic">
+                        <tr>
+                            <th>Aircraft Security Required?</th>
+                            <th>Level of Aircraft Security</th>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="security-req1"></td>
+                            <td><input type="text" name="security-level1"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="security-req2"></td>
+                            <td><input type="text" name="security-level2"></td>
+                        </tr>
+                    </table>
+                    <!-- radio buttons saying Yes or No -->
+                    <table class="basic">
+                        <tr>
+                            <th>Is there data or software uploaded on A/C which would require it to receive additional
+                                security?</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="radio" id="yes" name="security-req" value="yes">
+                                <label for="yes">Yes</label>
+                                <input type="radio" id="no" name="security-req" value="no">
+                                <label for="no">No</label>
+                            </td>
+
+                        </tr>
+                    </table>
+                    <h2>Entry Authorization Letters (EALs)</h2>
+                    <p>All units requiring access to controlled or restricted areas must
+                        hand carry the original signed EAL to the commander responsible for the area they will be
+                        utilizing.
+                    </p>
+                    <div class="form-navigation-buttons">
+                        <button type="button" class="prev-button" data-target="step8-content">Previous</button>
+                        <button type="button" class="next-button" data-target="step10-content">Save &amp; Continue</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="step10-content" class="content-div">
+                <div class="reference-number">
+                    Your Reference Number: <span></span>
+                </div>
+                <div class="form-step">
+                    <h1>WEAPONS INFORMATION (SMALL ARMS/CREW SERVED)</h1>
+                    <table class="basic" id="weaponrow">
+                        <tr>
+                            <th>Weapon Type</th>
+                            <th>Number of Weapons</th>
+                            <th>Box or Racked</th>
+                            <th>Weapon Storage Start Date</th>
+                            <th>Weapon Storage End Date</th>
+                            <th>Firing Range Start Date</th>
+                            <th>Firing Range End Date</th>
+                            <th># of Pax Needing Range</th>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="weapon-type1"></td>
+                            <td><input type="text" name="number-of-weapons1"></td>
+                            <td><input type="text" name="box-or-racked1"></td>
+                            <td><input type="date" name="weapon-storage-start-date1"></td>
+                            <td><input type="date" name="weapon-storage-end-date1"></td>
+                            <td><input type="date" name="firing-range-start-date1"></td>
+                            <td><input type="date" name="firing-range-end-date1"></td>
+                            <td><input type="text" name="pax-needing-range1"></td>
+                        </tr>
+                    </table>
+                    <button type="button" class="add-row-button" data-table="weaponrow">Add Row</button>
+                    <h1>SEA MOVEMENTS</h1>
+
+                    <p><strong>Transportation Expenses</strong> AAFB's transportation function is operated by a
+                        contractor. The contractor will require advanced payment (DD Form 448, MIPR) prior to services
+                        being rendered. Reimbursement of excess payment will be coordinated directly between your unit
+                        and the contract transportation function (Mr. Weathers 366-4843, Bldg 18002). See Finance
+                        Requirements for AF616/MIPR/ACSA information.
+                    </p>
+                    <table class="basic" id="searow">
+                        <tr>
+                            <th>Vessel Name</th>
+                            <th>Arrival Date/Time</th>
+                            <th>Departure Date/Time</th>
+                            <th>Passenger Information</th>
+                            <th>Cargo Information</th>
+                            <th>Addtional Information</th>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="vessel-name1"></td>
+                            <td><input type="datetime-local" name="arrival-date1"></td>
+                            <td><input type="datetime-local" name="arrival-date1"></td>
+                            <td><input type="text" name="passenger-info1"></td>
+                            <td><input type="text" name="cargo-info1"></td>
+                            <td><input type="text" name="additional-info1"></td>
+
+                    </table>
+                    <button type="button" class="add-row-button" data-table="searow">Add Row</button>
+                    <div class="form-navigation-buttons">
+                        <button type="button" class="prev-button" data-target="step9-content">Previous</button>
+                        <button type="button" class="next-button" data-target="step11-content">Save &amp; Continue</button>
+
+                    </div>
+                </div>
+            </div>
+
+            <div id="step11-content" class="content-div">
+                <div class="reference-number">
+                    Your Reference Number: <span></span>
+                </div>
+                <div class="form-step">
+                    <h1>LODGING REQUIREMENTS</h1>
+                    <p><strong>Avaliability:</strong> Lodging on AAFB is very limited. <strong>US Military:</strong> if
+                        on-base lodging is unavailable, you must obtain a <strong>Certificate of non-availability
+                            (CNA)</strong> from the AAFB Gateway Inn & Suites ((671)979- 5501, Bldg 27006,
+                        Andersen.Lodging@us.af.mil) in order to be authorized to secure off-base lodging. If your orders
+                        do not indicate AAFB as your temporary duty location, please first contact U.S. Naval Base Guam
+                        (COMNAVMAR) lodging (DSN 339-5259) or NCTAMS (355-5749) lodging to secure accommodations. AAFB
+                        Gateway Inn & Suites staff will book off base contract quarters for you if on base quarters are
+                        not available. Credit Cards are required to guarantee bookings. All groups requesting
+                        lodging on Guam must complete a “Group Fact Sheet” located at the end of this form. The
+                        completed GFS must be returned no later than 30 days prior to arrival. Foreign Military: Same
+                        process applies.</p>
+                    <p><strong>Distinguished Visitors: </strong> If you have distinguished visitors (DVs) (i.e. E-9, O-6
+                        and higher, or a GS-15 and higher), please fill out the attached DV notification form and return
+                        it to the 36 WG Protocol Office (36wg.ccp@us.af.mil, 366-1320, Bldg. 23003). 36 WG/CCP will
+                        coordinate all DV support.
+                    </p>
+                    <p>
+                        <strong>Distinguished Visitors: </strong>AAFB Lodging <strong>cannot accept DD Form 448s
+                            (MIPR).</strong> While credit cards are required to guarantee bookings, we will accept
+                        payment by cash, check, credit card or money order.
+                    </p>
+                    <p>
+                        <strong>Required Information: </strong>
+                        Forward confirmed personnel information (names, ranks, arrival/departure dates, etc.) Singles
+                        and double designation should be completed on the GFS located at the end of this document.
+                    </p>
+                    <h2>ADVON</h2>
+                    <table>
+                        <tr>
+                            <th>Check in date</th>
+                            <th>Check out date</th>
+                            <th>Officer</th>
+                            <th>Officer DV</th>
+                            <th>Enlisted</th>
+                            <th>Enlisted DV</th>
+                            <th>Civilian</th>
+                            <th>Civilian DV</th>
+                        </tr>
+                        <tr>
+                            <td><input type="date" name="check-in-date1"></td>
+                            <td><input type="date" name="check-out-date1"></td>
+                            <td><input type="text" name="officer1"></td>
+                            <td><input type="text" name="officer-dv1"></td>
+                            <td><input type="text" name="enlisted1"></td>
+                            <td><input type="text" name="enlisted-dv1"></td>
+                            <td><input type="text" name="civilian1"></td>
+                            <td><input type="text" name="civilian-dv1"></td>
+                        </tr>
+                    </table>
+                    <h2>Main Body</h2>
+                    <table>
+                        <tr>
+                            <th>Check in date</th>
+                            <th>Check out date</th>
+                            <th>Officer</th>
+                            <th>Officer DV</th>
+                            <th>Enlisted</th>
+                            <th>Enlisted DV</th>
+                            <th>Civilian</th>
+                            <th>Civilian DV</th>
+                        </tr>
+                        <tr>
+                            <td><input type="date" name="check-in-date2"></td>
+                            <td><input type="date" name="check-out-date2"></td>
+                            <td><input type="text" name="officer2"></td>
+                            <td><input type="text" name="officer-dv2"></td>
+                            <td><input type="text" name="enlisted2"></td>
+                            <td><input type="text" name="enlisted-dv2"></td>
+                            <td><input type="text" name="civilian2"></td>
+                            <td><input type="text" name="civilian-dv2"></td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <th colspan="8">Additional Lodging Request</th>
+                        </tr>
+                        <tr>
+                            <td rowspan="8"><input type="text" name="addlodging"></td>
+                        </tr>
+                    </table>
+                    <div>
+                        <button type="button" class="prev-button" data-target="step10-content">Previous</button>
+                        <button type="button" class="next-button" data-target="step12-content">Save &amp; Continue</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="step12-content" class="content-div">
+                <div class="reference-number">
+                    Your Reference Number: <span></span>
+                </div>
+                <div class="form-step">
+                    <h1>FOOD REQUIREMENTS</h1>
+                    <h2>Magellan Inn Dining Facility (Bldg 25010)</h2>
+                    <p>
+                        <strong>Boxed Meal/MRE Request:</strong> Please provide 24 hours advanced notice for large boxed
+                        meal and MRE requests. All other requests should be a minimum of 2 hours prior to the expected
+                        pick-up time.
+                    </p>
+                    <p>
+                        <strong>Funding Information: </strong>36 FSS needs to be notified of all planned meals for
+                        reimbursement information. Notify Food Services (366-5158/5152/2212;
+                        <strong>36FSS.FSVF.FoodService@us.af.mil</strong>) for cost details. See Financial Requirements
+                        section for 36 OG/RA MIPR address or ACSA information.
+                    </p>
+
+                    <table>
+                        <tr>
+                            <th>Breakfast (0500-0800) # Expected</th>
+                            <th>Lunch (1030-1330) # Expected</th>
+                            <th>Dinner (1630-1930) # Expected</th>
+                            <th># of Large Boxed Meals needed</th>
+                            <th># of Small Boxed Meals needed</th>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="breakfast1"></td>
+                            <td><input type="text" name="lunch1"></td>
+                            <td><input type="text" name="dinner1"></td>
+                            <td><input type="text" name="large-boxed-meals1"></td>
+                            <td><input type="text" name="small-boxed-meals1"></td>
+                        </tr>
+                        <tr>
+                            <th># of MREs Expected</th>
+                            <th colspan="4">Other Requirements</th>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="mres1"></td>
+                            <td colspan="4"><input type="text" name="other-requirements1"></td>
+                    </table>
+
+                    <div>
+                        <button class="prev-button" data-target="step11-content">Previous</button>
+                        <button class="next-button" data-target="step13-content">Save &amp; Continue</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="step13-content" class="content-div">
+                <div class="reference-number">
+                    Your Reference Number: <span></span>
+                </div>
+                <div class="form-step">
+                    <h1>SERVICES FACILITIES AVALIABLE FOR RENT</h1>
+                    <h2>Sunrise Conference Center: 366-4654</h2>
+                    <p>Basic Commander’s Call set up - $150 <br>
+                        Events involving tables, linens, etc. – min. $300
+                    </p>
+                    <h2>Other Facilities</h2>
+                    <p>Meridian Café: 366-4654; Rate - $150/hr <br>
+                        Bamboo Willies: 653-9814; Rate - $150/hr
+                    </p>
+                    <h2>Standard Chair and Table Rental Cost</h2>
+                    <p>
+                        Chairs - $1/day or $5/week <br>
+                        Tables - $3.50/day or $17.50/week
+                    </p>
+
+                    <div>
+                        <button type="button" class="prev-button" data-target="step12-content">Previous</button>
+                        <button type="button" class="next-button" data-target="step14-content">Save &amp; Continue</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="step14-content" class="content-div">
+                <div class="reference-number">
+                    Your Reference Number: <span></span>
+                </div>
+                <div class="form-step">
+                    <h1>FACILITY REQUIREMENTS</h1>
+                    <p>
+                        Facilities at AAFB are very limited, so be descriptive as you <strong>identify your minimum
+                            requirements.</strong> Please include any specific power, location, or other requirements
+                        that may be useful. <br>
+                        <strong>An Entry/Access Authority List (EAL) is required for all personnel utilizing Controlled
+                            Areas, Restricted Facilities, or the Flight line.</strong> Templates can be found under the
+                        paper clip on the side of the ARC.
+                        Contact the following for each: <br>
+                        Tropicana: 36 OG / 366-5270/5277 <br>
+                        Flight Line Access: 36 OSS/OSAM / 366-4188/1010<br>
+                        Bldg 25002 & ACP: 36 OSS/OSX / 366-9821/4253<br>
+                        Bldg 18008: Aircrew Flight Equipment / 366-1753
+                    <h2>**NOTE**</h2>
+                    <p>There are <strong>no available safes</strong> to issue to inbound units on AAFB. If unit requires
+                        storage of classified equipment or information, unit must bring or purchase their own.</p>
+                    <table class="basic">
+                        <tr>
+                            <th rowspan="2">Operations</th>
+                            <th># of Rooms</th>
+                            <th>Room Dimensions</th>
+                            <th>Type of Rooms</th>
+                            <th>Other</th>
+                        </tr>
+                        <tr>
+                            <!-- operations will not have an input -->
+                            <td><input type="text" name="numrooms"></td>
+                            <td><input type="text" name="roomdimensions"></td>
+                            <td><input type="text" name="typeofrooms"></td>
+                            <td><input type="text" name="other"></td>
+                        </tr>
+                        <!-- maintanance -->
+                        <tr>
+                            <th rowspan="2">Maintenance operations</th>
+                            <th># of Rooms</th>
+                            <th>Room Dimensions</th>
+                            <th>Type of Rooms</th>
+                            <th>Other</th>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="numrooms1"></td>
+                            <td><input type="text" name="roomdimensions1"></td>
+                            <td><input type="text" name="typeofrooms1"></td>
+                            <td><input type="text" name="other1"></td>
+                        </tr>
+                        <tr>
+                            <th>Maintenance storage</th>
+                            <td><input type="text" name="numrooms2"></td>
+                            <td><input type="text" name="roomdimensions2"></td>
+                            <td><input type="text" name="typeofrooms2"></td>
+                            <td><input type="text" name="other2"></td>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <th># of Lockers</th>
+                            <th>Type of Rooms</th>
+                            <th>Storage Rqmts</th>
+                            <th>Other(Include # pallets)</th>
+                        </tr>
+                        <tr>
+                            <th>AFE/PR/ALSE</th>
+                            <td><input type="text" name="numlockers"></td>
+                            <td><input type="text" name="typeofrooms3"></td>
+                            <td><input type="text" name="storagereqmts"></td>
+                            <td><input type="text" name="other3"></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="2">Other (Describe)</th>
+                            <td colspan="4"><input type="text" name="other4"></td>
+                        </tr>
+                    </table>
+
+                    <div>
+                        <button type="button" class="prev-button" data-target="step13-content">Previous</button>
+                        <button type="button" class="next-button" data-target="step15-content">Save &amp; Continue</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="step15-content" class="content-div">
+                <div class="reference-number">
+                    Your Reference Number: <span></span>
+                </div>
+                <div class="form-step">
+                    <h1>MAINTENANCE</h1>
+                    <h2>Aircraft Maintenance</h2>
+                    <p>
+                        Standard maintenance capabilities for launch, recovery, servicing, and removal/ replacement
+                        actions are the responsibility of <strong>your unit.</strong> 36 MXG has limited ability to
+                        support maintenance requests. Follow the requirements in the 36 MXG Reception of Forces Guide
+                        for any requirement/request for the 36 MXG.
+                        SPILL KITS: Units must bring or purchase upon arrival. <br>
+                        DRIP PANS: Units MUST bring drip pans. <br>
+                        A parking apron inspection will be conducted with the MX Superintendent and Airfield Management
+                        upon arrival and two days prior to departure.
+                        (Contact: 36 OSS/OSAM, Airfield Manager at 366-5213/1196)
+                    </p>
+                    <h2>Hazardous Waste Accumulation & Disposal:</h2>
+                    <p>
+                        See Civil Engineering Section/36 MXG Reception of Forces guide.<br>
+                        *The 36 MXG Reception of Forces Guide can be found in the Reference section of the ARC*
+                    </p>
+                    <table>
+                        <tr>
+                            <th colspan="1">Back Shop Support Required </th>
+                            <th></th>
+                            <th colspan="3">Is Ejection seat maintenance required?,<br> If yes, identify aircraft type
+                                and additional details. </th>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><input type="text" name="backshop"></td>
+                            <td colspan="4"><input type="text" name="ejection"></td>
+                        </tr>
+                    </table>
+                    <div>
+                        <button type="button" class="prev-button" data-target="step14-content">Previous</button>
+                        <button type="button" class="next-button" data-target="step16-content">Save &amp; Continue</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="step16-content" class="content-div">
+                <div class="reference-number">
+                    Your Reference Number: <span></span>
+                </div>
+                <div class="form-step">
+                    <h1>AEROSPACE GROUND EQUIPMENT (AGE) /<br> GROUND SUPPORT EQUIPMENT (GSE)</h1>
+                    <table>
+                        <tr>
+                            <th>B-1 Mx Stand</th>
+                            <th>B-4 Mx Stand</th>
+                            <th>Light Cart(NF-2D/FL-2D)</th>
+                            <th>Acft Tow Bar(Specific type)</th>
+                            <th>MC-2A Low Air Compressor</th>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="b1"></td>
+                            <td><input type="text" name="b4"></td>
+                            <td><input type="text" name="lightcart"></td>
+                            <td><input type="text" name="acfttowbar"></td>
+                            <td><input type="text" name="mc2a"></td>
+                        </tr>
+                        <tr>
+                            <th>-95/Air Start Cart</th>
+                            <th>Power Unit (-86/B809)</th>
+                            <th>Self-Generating Nitrogen Cart</th>
+                            <th colspan="2">Other</th>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="95"></td>
+                            <td><input type="text" name="powerunit"></td>
+                            <td><input type="text" name="selfgenerating"></td>
+                            <td colspan="2"><input type="text" name="other"></td>
+                    </table>
+                    <p>
+                    <ul>
+                        <li>Please contact the AGE Flight at 366-1845 or 366-2227, Bldg. 18004) immediately upon arrival
+                            so the requested AGE/GSE is made available/ready for use.</li>
+                        <li>Ensure AGE mechanics/drivers report to <strong>Bldg. 18004</strong> to sign for equipment
+                        </li>
+                        <li>WRM Indirect Mission Support Request (IMSR) and funding may be required prior to the release
+                            of certain assets. Inbound units will be notified via the RWG slides if an IMSR is needed.
+                            IMSR template can be found in the Reference section of the ARC. Submit request for approval
+                            NLT 60 days prior to arrival, 90 days prior for non USAF and foreign units.</li>
+                        <li>Be prepared to maintain (fuel levels) and deliver AGE assets independently.</li>
+                        <li><strong><u>Using agencies MUST HAVE AGE ADVON to pre-inspect equipment prior to aircraft
+                                    arrival and POSTVON to ensure equipment is reconstituted in a timely
+                                    manner.</u></strong></li>
+                        <li>AGE Flight does NOT provide bobtails, forklifts. See transportation section for support.
+                        </li>
+                        <li>LOX/GOX is coordinated through Accessories Flight E&E section @ 366-7266</li>
+                    </ul>
+                    <div>
+                        <button type="button" class="prev-button" data-target="step15-content">Previous</button>
+                        <button type="button" class="next-button" data-target="step17-content">Save &amp; Continue</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="step17-content" class="content-div">
+                <div class="reference-number">
+                    Your Reference Number: <span></span>
+                </div>
+                <div class="form-step">
+                    <h1>MUNITIONS/ORDNANCE REQUIREMENTS</h1>
+                        <strong><u>All units requesting Munitions Support:</u></strong><br>
+                    <ul>
+                        <li>36 MUNS does NOT transport munitions/ordnance between Naval Base Guam and Andersen AFB.</li>
+                        <li>36 MUNS does NOT transport munitions/ordnance to/from Munitions Storage Areas, Flightline,
+                            Hot Cargo pad and/or 734th AMS.</li>
+                        <li>36 MUNS does NOT handle or build any Units Munitions/Ordinance.</li>
+                        <li>36 MUNS does NOT load, unload any Units Munitions/Ordinance to/from trailers, vehicles,
+                            aircraft or in/out of munitions storage facilities.</li>
+                        <li>36 MUNS does NOT provide bobtails/tow vehicles or special purpose vehicles. A formal request
+                            must be made through Transportation.</li>
+                        <li>36 MUNS does NOT provide Forklift support. A formal request must be made through
+                            Transportation. Due to geographic separation from base, Transportation agency may formally
+                            recall forklift from 36 MUNS if unit can support said request.</li>
+                        <li>Once unit arrives, a meet and greet with 36 MUNS/MXW and MUNS Control is scheduled. All
+                            support must be coordinated at that time.</li>
+                        <li>Any changes to support must be made NLT 72 hours prior to activities, including receiving of
+                            munitions/ordnance cargo from flightline, with MUNS Control.</li>
+                        <li>ALL assets brought to AAFB must return with unit at end of exercise unless previously
+                            coordinated. 36 MUNS cannot keep non-USAF munitions/ordnance assets/residue.</li>
+                        <li>Please contact MUNS Control at DSN 315-366-6300, Comm 671-366-6300/6393/6394 or e-mail
+                            <strong>36muns-control@us.af.mil.</strong></li>
+                    </ul>
+                    <strong><u>For USAF units who will submit an Allocation Transfer Request (ATR):</u></strong>
+                    <ul>
+                        <li>CSA/MOU request is not needed.</li>
+                        <li>Submit ATR in AMST NLT 90 days prior to arrival.</li>
+                    </ul>
+                    <strong><u>For USAF units who will not submit an ATR and will expend from home station:</u></strong>
+                    <ul>
+                        <li>CSA/MOU required.</li>
+                        <li>Units requesting support from the Munitions Squadron must fill out the attached CSA/MOU
+                            request NLT 30 days prior to arrival.</li>
+                        <li>Please email <strong>36muns.storage@us.af.mil</strong> for the most current version.</li>
+                    </ul>
+                    <strong><u>For other than USAF units:</u></strong>
+                    <ul>
+                        <li>CSA/MOU required.</li>
+                        <li>Units requesting support from the Munitions Squadron must fill out the attached CSA/MOU
+                            request NLT 30 days prior to arrival.</li>
+                        <li>Please email <strong>36muns.storage@us.af.mil and 36muns-control@us.af.mil</strong> for the
+                            most current version.
+                            <strong>The below information for support is requested NLT 30 days prior to
+                                arrival.</strong>
+                        </li>
+                    </ul>
+                    <table class="basic">
+                        <tr>
+                            <th colspan="4">Types of Munitions / Ordnance Asset <br> (NSN/DODIC/NOUN)</th>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="typesofmunitions1"></td>
+                            <td><input type="text" name="typesofmunitions2"></td>
+                            <td><input type="text" name="typesofmunitions3"></td>
+                            <td><input type="text" name="typesofmunitions4"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="typesofmunitions5"></td>
+                            <td><input type="text" name="typesofmunitions6"></td>
+                            <td><input type="text" name="typesofmunitions7"></td>
+                            <td><input type="text" name="typesofmunitions8"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="typesofmunitions9"></td>
+                            <td><input type="text" name="typesofmunitions10"></td>
+                            <td><input type="text" name="typesofmunitions11"></td>
+                            <td><input type="text" name="typesofmunitions12"></td>
+                        </tr>
+                    </table>
+                    <div>
+                        <button type="button" class="prev-button" data-target="step16-content">Previous</button>
+                        <button type="button" class="next-button" data-target="step18-content">Save &amp; Continue</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="step18-content" class="content-div">
+                <div class="reference-number">
+                    Your Reference Number: <span></span>
+                </div>
+                <div class="form-step">
+                    <h1>MUNITIONS/ORDNANCE REQUIREMENTS</h1>
+                    <h3>**NOTE**</h3>
+                    <p>
+                        Munitions/ordnance information is <strong>required</strong> to ensure compatibility and storage
+                        requirements are available in the MSA. Failure to provide the requested information may cause
+                        munitions/ordnance storage and transport delays upon arrival.</p> <br>
+
+                        <u>Munitions/Ordnance Operating Facility Details:</u> <br>
+                    <ul>
+                        <li>Explosive operations must be scheduled to ensure availability. All High CIIC/sensitive
+                            assets must be stored in a Munitions Storage Facility with the same degree as its
+                            classification. Request for storage of High CIIC/sensitive items must be coordinated prior
+                            to arrival to ensure availability of facility.</li>
+                        <li>Bldg 9105 is the designated Bomb Assembly pad. This area is outdoors only. Units may keep
+                            equipment and built up assets here. Storage of explosive assets over the weekend is
+                            prohibited unless approved by 36 MUNS/MXW in advance.</li>
+                        <li>Bldg 9016 is designated as the Chaff & Flare Operating Facility. The Chaff & Flare Operating
+                            Facility is limited to 2 operating bays with 2 grounded tables each.</li>
+                    </ul>
+                    <u>Munitions/Ordnance MMHR/Forklift Requirements:</u> <br>
+                    <ul>
+                        <li>WRM Indirect Mission Support Request (IMSR) and funding is <strong>required</strong> for
+                            trailer and ARS use. Submit request for approval NLT 60 days prior to arrival, 90 days prior
+                            for non USAF and foreign units. Available trailers: MHU-141, MHU-110, and MHU-226. Trailers
+                            and ARSs are limited in quantity and are provided on a ‘first come/first served’ basis. IMSR
+                            template can be found in the Reference section of the ARC.</li>
+                        <li>36 MUNS does not own any chaff & flare transport modules. Units must bring transport modules
+                            or 20MM cans to transport chaff & flare to/from flightline.</li>
+                        <li>Units must bring M-10 trees if mission dictates use.</li>
+                        <li>There is no AGM-88 or 20MM capability at Andersen AFB.</li>
+                    </ul>
+                    <u>Tools &amp; Equipment Details:</u> <br>
+                    <ul>
+                        <li>36 MUNS unit is limited on Tools, Test sets and special equipment. Units are required to
+                            bring their own Tools, Test Sets, Special Handling Equipment, M10 trees and missile
+                            maintenance stands.</li>
+                        <li>Units MUST bring all HAZMAT consumables from home station (spray paint, silicone compound
+                            grease, nitrile gloves, etc).</li>
+                        <li>Bomb assembly tools are limited to USAF -63 items. All units must bring any specialized
+                            tools/test sets.</li>
+                        <li>There is no argon on island, units must bring all argon.</li>
+                    </ul>
+                    <u>Support Required Outside normal Duty Hours:</u> <br>
+                    USAF units have unescorted access to the Munitions Storage Area (MSA) 24hrs M-F. Non-USAF units:
+                    0700-1700 M-F unless coordinated 72 hrs in advance. All access to structures will be requested NLT
+                    72 hrs in advance for all units (USAF and non-USAF)
+
+                    <div>
+                        <button type="button" class="prev-button" data-target="step17-content">Previous</button>
+                        <button type="button" class="next-button" data-target="step19-content">Save &amp; Continue</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="step19-content" class="content-div">
+                <div class="reference-number">
+                    Your Reference Number: <span></span>
+                </div>
+                <div class="form-step">
+                    <h1>TRANSPORTATION REQUIREMENTS</h1>
+                    <p>
+                        <u>Avaliability</u> Government vehicles at AAFB are extremely limited. U-Drive-It vehicles will
+                        be on an as needed/as available basis with the first to fund principle taking priority.
+                        Requesting units are required to utilize Government Owned Vehicles prior to seeking other
+                        commercial lease/rental options. Once a request for vehicle support is submitted both Andersen
+                        AFB, Guam and Naval Base Guam will validate if the requirement will be met. In the event a
+                        specific vehicle requirement cannot be filled a non- Availability Letter will be awarded to the
+                        requesting unit. Units are then required to secure commercial lease/rental vehicles using their
+                        Government Travel Card (GTC) unless the vehicle requirement is for bulk transportation
+                        (<strong>greater than 10 ea. 15 PAX Vans</strong>). In the event of a requirement for
+                        <strong>bulk transportation</strong>, a valid vehicle non-availability letter from 36 LRS must
+                        be submitted to 36 CONS with the Unit’s requirement package NLT 90 days prior to arrival.
+                    </p>
+                        <u>U-Drive-It:</u>
+                    <ul>
+                        <li>Andersen Air Force Base U-Drive-It vehicle rentals are not subject to foreign customers.
+                            Foreign customers will be eligible to contact Navy Base Guam for vehicle rentals.</li>
+                        <ul>
+                            <li>Navy Base Guam Vehicle Rental</li>
+                            <ul>
+                                <li>Commercial (671) 333-2995 or 333-2996</li>
+                                <li>DZSP21TransOPSSupport@dzsp21.com</li>
+                            </ul>
+                        </ul>
+                        <li>Every customer will identify all known short term vehicle requirements on the Transportation
+                            U-Drive-It Request Form and submit via email to 36 LRS Vehicle Operations.</li>
+                        <ul>
+                            <li>Email: 36lrs.ctrdispatch@us.af.mil</li>
+                            <li>Vehicle Operations Dispatch Phone</li>
+                            <ul>
+                                <li>Commercial (671) 366-2239</li>
+                                <li>DSN (315) 366-2239</li>
+                            </ul>
+                        </ul>
+                        <li>Customers will be provided a cost estimate from Vehicle Operations for all vehicles
+                            requested which can be filled using GMVs.
+                            <ul>
+                                <li>36 LRS Vehicle Operations will be open 24/7</li>
+                                <li>Estimates will be provided within 24 hours of request</li>
+                            </ul>
+                        </li>
+
+                        <ul>
+                            Customers will be directed to NAVFAC Financial Management Office to establish a Line of
+                            Accounting (LOA).
+                            <ul>
+                                <li>NAVFAC Financial Management office POCs:</li>
+                                <ul>
+                                    <li>Daniel Knight – 349-2173</li>
+                                    <ul>
+                                        <li>Email: Daniel.knight@fe.navy.mil
+                                    </ul>
+                                    <li>Martha Crisostomo – 349-2062</li>
+                                    <ul>
+                                        <li>Email: Martha.crisotomo@fe.navy
+                                    </ul>
+                                </ul>
+                            </ul>
+                        </ul>
+
+
+                        <li>Without a LOA, rentals cannot be released.</li>
+                        <li>Prior to picking up a vehicle, the customer must perform quality control inspection of the
+                            vehicle being rented accompanied by an authorized annex personnel to validate overall
+                            condition.</li>
+                        <li>When a vehicle is checked-out a work order/trip ticket will be created for both records
+                            purposes and inventory control. These forms will remain open until assets are returned. Upon
+                            vehicles returning to Vehicle Operations to complete the rental, a final vehicle inspection
+                            will be accomplished to validate condition of asset. This will be performed by the operator
+                            an authorized annex member.</li>
+                        <li>When a vehicle is returned, the customer must perform an inspection of the vehicle being
+                            checked-in along with authorized annex personnel to validate condition. If new damage is
+                            discovered on returning asset the customer will fill out a form SF91, Motor Vehicle Accident
+                            Report.</li>
+                        <li>In the event a vehicle received any damages a new funding document will be established based
+                            on an estimate from Vehicle Management for repair to the applicable damages.</li>
+                    </ul>
+                    <u>VIL Keys (DS2/MOGAS):</u>
+                    <ul>
+                        <li>Vehicle Identification Link (VIL) keys are encoded for each vehicle to bill fueling.</li>
+                        <li>VIL keys will be issued through Vehicle Operations.</li>
+                        <li>If the VIL keys requires additional support customers will need to contact 36 LRS/LGRF at
+                            (671) 366-6291, open 24/7:</li>
+                        <ul>
+                            <li>Primary Phone (671) 366-2239</li>
+                            <li>Alternate Phone (671) 366-7258</li>
+                            <li>Alternate Phone (671) 366-4971</li>
+                            <li>Located in Building 18040 on AAFB</li>
+                        </ul>
+                    </ul>
+                    <u>VIL KEY NSN:</u> 5962-01-329-8665<br>
+                    <u>Rental Vehicles:</u> Vehicle Rentals (Hire Cars) are not handled by Vehicle Ops. See Contracting
+                    section for details.
+                    <h3>**NOTE**</h3>
+                    <p><strong>Transportation will be provided from the Aircraft to the mandatory PERSCO briefing and
+                            <u>ONE</u> of the following locations: Lodging (on/off base) or your Vehicle pick up
+                            location (trans/rental).<u>Do not include this requirement in the below vehicle
+                                requests.</u></strong></p>
+
+                    <div>
+                        <button type="button" class="prev-button" data-target="step18-content">Previous</button>
+                        <button type="button" class="next-button" data-target="step20-content">Save &amp; Continue</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="step20-content" class="content-div">
+                <div class="reference-number">
+                    Your Reference Number: <span></span>
+                </div>
+                <div class="form-step">
+                    <h1>Vehicle Request (Including MHE) (GOVs/NON-CONTRACT)</h1>
+                    <table>
+                        <tr>
+                            <th>High Reach Bucket Truck</th>
+                            <th>7.5 Ton Crane</th>
+                            <th>Bobtail Tow Vehicle (40k lbs cap)</th>
+                            <th>MB-2 Tow Vehicle (max cap: 500k lbs)</th>
+                            <th>MB-4 tow vehicle (max cap: Aircraft 175k lbs; Trailer-80k lbs)</th>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="highreachbuckettruck"></td>
+                            <td><input type="text" name="7.5toncrane"></td>
+                            <td><input type="text" name="bobtailtowvehicle"></td>
+                            <td><input type="text" name="mb2towvehicle"></td>
+                            <td><input type="text" name="mb4towvehicle"></td>
+                        </tr>
+                        <tr>
+                            <th>6k Forklift</th>
+                            <th>10k Forklift</th>
+                            <th>10k AT Forklift</th>
+                            <th>25k Forklift</th>
+                            <th>10 Ton Tractor</th>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="6kforklift"></td>
+                            <td><input type="text" name="10kforklift"></td>
+                            <td><input type="text" name="10katforklift"></td>
+                            <td><input type="text" name="25kforklift"></td>
+                            <td><input type="text" name="10tontractor"></td>
+                        </tr>
+                    </table>
+                    <h1>U-Drive-It RENTAL VEHICLES</h1>
+                    <table>
+                        <tr>
+                            <th>Sedan</th>
+                            <th>3 PAX Truck</th>
+                            <th>6 PAX Truck</th>
+                            <th>1 ton Stake and Platform</th>
+                            <th> 8 PAX Van</th>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="sedan"></td>
+                            <td><input type="text" name="3paxtruck"></td>
+                            <td><input type="text" name="6paxtruck"></td>
+                            <td><input type="text" name="1tonstakeandplatform"></td>
+                            <td><input type="text" name="8paxvan"></td>
+                        </tr>
+                        <tr>
+                            <th colspan="2">36 PAX bus(available only at NBG)</th>
+                            <th colspan="2">12 PAX Van(available only at NBG)</th>
+                            <th>Multi-Stop / Bread Van</th>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><input type="text" name="36paxbus"></td>
+                            <td colspan="2"><input type="text" name="12paxvan"></td>
+                            <td><input type="text" name="multistop"></td>
+                        </tr>
+                        <tr>
+                            <th colspan="5">Other Request</th>
+                        </tr>
+                        <tr>
+                            <td colspan="5"><input type="text" name="otherrequest"></td>
+                        </tr>
+                    </table>
+                    <div>
+                        <button type="button" class="prev-button" data-target="step19-content">Previous</button>
+                        <button type="button" class="next-button" data-target="step21-content">Save &amp; Continue</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="step21-content" class="content-div">
+                <div class="reference-number">
+                    Your Reference Number: <span></span>
+                </div>
+                <div class="form-step">
+                    <h1>COMMUNICATION REQUIREMENTS</h1>
+                    <p>
+                        <strong><u>Unit Requirements:</u></strong> Your <strong>unit must bring</strong> STU-IIIs, fax
+                        machines, printer paper, printer toner, and classified/unclassified shredders. NIPRNET machines
+                        must have a current Standard Desktop Configuration (SDC) image on them and be current with all
+                        McAfee antivirus definitions to be put on the Andersen network. SIPRNET machines must be
+                        compatible with MTRJ outlets/patch cords. Exact location of trailers, if using, is needed 30 or
+                        more days prior to arrival to provide a wiring quote.<br>
+                        <strong> Please detail number of DSN lines, laptops, and accounts below.</strong>
+                        <br><br>
+                        <strong><u>NLT 150 - NLT 180 DAYS</u></strong> <br>
+                        All units who require changes to Andersen AFB network infrastructure MUST submit the appropriate
+                        Change Request. This includes but is not limited to connecting unit owned systems to Andersen
+                        AFB infrastructure, configuration changes, network modifications and new installations. Units
+                        are required to provide justification, make, model, serial number, MAC addresses and IP
+                        addresses (at a minimum) of all unit owned equipment requesting to be connected to Andersen AFB
+                        infrastructure. All requests must be submitted NLT 150 – 180 days prior to arrival. Contact 36
+                        CS/RWG (Reception Working Group) at DSN: (315) 362-2703. COMM: (671) 362-2703 or via email
+                        <strong>36CS.SCXP.RWG@us.af.mil</strong> for further information.
+                    </p>
+                    <table class="basic">
+                        <tr>
+                            <th colspan="5">Operations Workspace</th>
+                        </tr>
+                        <tr>
+                            <th>DSN Phone Line</th>
+                            <th>NIPR Laptop</th>
+                            <th>NIPR Account</th>
+                            <th>SIPR Account</th>
+                            <th>Sharedrive/Security Group</th>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="dsnphoneline"></td>
+                            <td><input type="text" name="niprlaptop"></td>
+                            <td><input type="text" name="nipraccount"></td>
+                            <td><input type="text" name="sipraccount"></td>
+                            <td><input type="text" name="sharedrive"></td>
+                        </tr>
+                        <tr>
+                            <th colspan="5">Maintenance Workspace</th>
+                        </tr>
+                        <tr>
+                            <th>DSN Phone Line</th>
+                            <th>NIPR Laptop</th>
+                            <th>NIPR Account</th>
+                            <th>SIPR Account</th>
+                            <th>Sharedrive/Security Group</th>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="dsnphoneline1"></td>
+                            <td><input type="text" name="niprlaptop1"></td>
+                            <td><input type="text" name="nipraccount1"></td>
+                            <td><input type="text" name="sipraccount1"></td>
+                            <td><input type="text" name="sharedrive1"></td>
+                        </tr>
+                        <tr>
+                            <th colspan="5">Other Workspace</th>
+                        </tr>
+                        <tr>
+                            <th>DSN Phone Line</th>
+                            <th>NIPR Laptop</th>
+                            <th>NIPR Account</th>
+                            <th>SIPR Account</th>
+                            <th>Sharedrive/Security Group</th>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="dsnphoneline2"></td>
+                            <td><input type="text" name="niprlaptop2"></td>
+                            <td><input type="text" name="nipraccount2"></td>
+                            <td><input type="text" name="sipraccount2"></td>
+                            <td><input type="text" name="sharedrive2"></td>
+                        </tr>
+                        <tr>
+                            <th colspan="5">Wireless Requirements</th>
+                        </tr>
+                        <tr>
+                            <th>Base station</th>
+                            <th>Radio (LMR)</th>
+                            <th>Radio Charger</th>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="basestation"></td>
+                            <td><input type="text" name="radio"></td>
+                            <td><input type="text" name="radiocharger"></td>
+                        </tr>
+                        <tr>
+                            <th colspan="1">List required talk groups(Intra-Units)</th>
+                            <td colspan="4"><input type="text" name="talkgroup"></td>
+                        </tr>
+                        <tr>
+                            <th colspan="1">List required talk groups(Intra-Units on AAFB)</th>
+                            <td colspan="4"><input type="text" name="talkgroupaafb"></td>
+                        </tr>
+                        <tr>
+                            <th colspan="1">List required ground to air frequencies</th>
+                            <td colspan="4"><input type="text" name="grtoair"></td>
+                        </tr>
+                        <br>
+                        <tr>
+                            <th colspan="5">Other Communications Requirements (commercial internet, service-specific
+                                internet, SharePoint etc)</th>
+                        </tr>
+                        <tr>
+                            <td colspan="5"><input type="text" name="othercommunications"></td>
+                        </tr>
+                    </table>
+                    <p>
+                        <strong><u>SIPR/NIPR Accounts: </u></strong>Temporary NIPR and SIPR account request forms are
+                        located below and can also be obtained by emailing the 36 CS/RWG at 36CS.SCXP.RWG@us.af.mil or
+                        by calling 362-2703. The unit Information Assurance Officer (IAO) is responsible for filling out
+                        the temporary NIPR and SIPR letters and forwarding them to 36CS.SCXP.RWG@us.af.mil NLT 60 days
+                        prior to arrival. In addition, if the deployed unit is bringing a Client Support Administrator
+                        (CSA), he/she must contact the 36CS/RWG shop for procedures to obtain an Andersen administrative
+                        account. When CSAs arrive on base, they must contact, in person, the 36CS/RWG shop for
+                        validation purposes.
+                    </p>
+
+                    <div>
+                        <button type="button" class="prev-button" data-target="step20-content">Previous</button>
+                        <button type="button" class="next-button" data-target="step22-content">Save &amp; Continue</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="step22-content" class="content-div">
+                <div class="reference-number">
+                    Your Reference Number: <span></span>
+                </div>
+                <div class="form-step">
+                    <h1>INTELLIGENCE REQUIREMENTS</h1>
+                        <strong><u>Unit Requirements: </u></strong>36th Wing Intel requests that visiting Intel
+                        activities:
+                    <ul>
+                        <li>Check-in prior to arrival (36oss.in@us.af.mil / DSN 366-1428 / TSVOIP 989-1428) and by
+                            phone/in-person on arrival (Bldg 25002, Ops Group HQ), to provide (1) local contact info,
+                            (2) duty location and (3) any priority intelligence requirements. We will pass urgent
+                            reports, and if desired, periodic local area threat updates.</li>
+                        <li>Access to geospatial production systems is very limited. You are strongly encouraged to
+                            prepare these prior to arrival. Geospatial info requests should be coordinated in advance of
+                            your visit.</li>
+                    </ul>
+                    <strong><u>SCIF and JWICS Access, SCI Storage:</u></strong> Coordinated through Andersen AFB Special
+                    Security Office. DSN 366-7761, Bldg 25002, SMO Code “SSO AAFB”. Existing JWICS accounts (AFNET or
+                    DODIIS) can be accessed at 36th Wing Intel’s SCIF (Bldg 25002).
+                    <h1>FINANCIAL REQUIREMENTS</h1>
+                    <p>
+                        <strong><u>Funding Documents: </u></strong>Because Andersen AFB Environmental Services is part
+                        of Joint Region Marianas, financial documents to both the 36th Wing and NAVFAC Marianas may be
+                        required. Financial documents for contracting and supply requirements will be handled by the 36
+                        Operations Group Resource Advisor (366-3665) while HW IDIQ Requirements are handled by NAVFAC
+                        Marianas (NAVFACMAR). A funding stream must be established with NAVFAC prior to any work being
+                        accomplished. Please contact NAVFAC for their standard rate book. For more information regarding
+                        NAVFAC funding requirements, please contact 36 CES Resources Flight (366-5061).
+                        <br><br>
+                        If your unit will be on station for more than 180 days, Your financial POCs must work with 36
+                        CPTS/FMA (<strong>36cpts.fma@us.af.mil</strong> 366-5887) in order to gain access into Air Force
+                        Financial Management Systems.
+                    </p>
+                    <table>
+                        <tr>
+                            <th><strong>MIPR ADDRESS:</strong></th>
+                            <th>MIPR ADDRESS for 36 CES / NAVFAC</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                36th Operations Group<br>
+                                Unit 14018 APO, AP 96543-4018<br>
+                                DSN: 315-366-3665<br>
+                            </td>
+                            <td>(Facilities Maintenance, Waste Disposal): <br>
+                                NAVFAC Marianas NWCF<br>
+                                PSC 455 Box 195<br>
+                                FPO AP 96540 2937<br>
+                                Attention: Connie Becker <br>
+                                DSN: 315-349-2428 <br>
+                                Email: <strong> cension.becker@fe.navy.mil</strong>
+                            </td>
+                        </tr>
+                    </table>
+                    <p>
+                        <strong><u>Acquisition and Cross-Servicing Agreement (ACSA): </u>Allied forces do not require a
+                            MIPR or AF616.</strong> Contact the Support Agreement Manager (366-1300, Bldg 17000,
+                        <strong>36wg.idrc@us.af.mil</strong>) for any issues.
+                    </p>
+
+                    <div>
+                        <button type="button" class="prev-button" data-target="step21-content">Previous</button>
+                        <button type="button" class="next-button" data-target="step23-content">Save &amp; Continue</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="step23-content" class="content-div">
+                <div class="reference-number">
+                    Your Reference Number: <span></span>
+                </div>
+                <div class="form-step">
+                    <h1>CONTRACTING REQUIREMENTS</h1>
+                    <p>
+                        Any requirements that need to be worked/purchased by 36 CONS for Air Force units shall be
+                        submitted in DEAMS with a full requirements package. A checklist and supporting documents for
+                        requirements packages for 36 CONS may be accessed at the 36 CONS SharePoint:
+                        <strong>https://usaf.dps.mil/sites/andersen/36MSG/36CONS/SitePages/Customer%20Education%20and%20Support.aspx?ga=1</strong>
+                        Recommend working with your Resource Advisor (RA) for assistance.<br>
+                        Other US Forces (Army, Navy, and Marines) must have a General Terms & Conditions (GT&C) or other
+                        support agreement in place with 36 Wing prior to support being provided. Also, a MIPR must be
+                        provided with the complete package as stated in the 36 CONS Requirements Checklist from the
+                        SharePoint. Other US forces must also have an agreement in place for 36 CONS to support
+                        them.<br><br>
+                        Non-US agencies will coordinate through agreements and their liaisons for any contract support.
+                        <br><br>
+                        Any questions of clarifications should be directed to DSN 315-366-4942 Contingency Support Cell.
+                    </p>
+                    <div>
+                        <button type="button" class="prev-button" data-target="step22-content">Previous</button>
+                        <button type="button" class="next-button" data-target="step24-content">Save &amp; Continue</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="step24-content" class="content-div">
+                <div class="reference-number">
+                    Your Reference Number: <span></span>
+                </div>
+                <div class="form-step">
+                    <h1>LOCAL RENTAL CAR COMPANIES (MARKET RESEARCH)</h1>
+                    <table class="basic">
+                        <tr>
+                            <th>COMPANY</th>
+                            <th>PHONE CONTACT</th>
+                            <th>COMANY</th>
+                            <th>PHONE CONTACT</th>
+                        </tr>
+                        <tr>
+                            <td>National Car Pacific</td>
+                            <td>671-647-1017</td>
+                            <td>Nissan Rent a Car</td>
+                            <td>671-647-7264/647-7290</td>
+                        </tr>
+                        <tr>
+                            <td>Hertz</td>
+                            <td>671-646-0355/699-1647</td>
+                            <td>Budget</td>
+                            <td>671-657-1444/787-0033</td>
+                        </tr>
+                        <tr>
+                            <td>Avis</td>
+                            <td>671-646-2847</td>
+                            <td>Dollar Rent-A-Car</td>
+                            <td>671-646-7000</td>
+                        </tr>
+                    </table>
+                    <table class="basic">
+                        <h2><strong>Vehicles (15 pax and above)/Heavy Equip Rentals:</strong><br>No vehicles under 15
+                            pax without prior coordination and approval by 36 CONS/CC</h2>
+
+                        <tr>
+                            <th bgcolor="#C0C0C0">Type of Vehicle</th>
+                            <th bgcolor="#C0C0C0">Quantity</th>
+                            <th bgcolor="#C0C0C0">Dates Required</th>
+                            <th bgcolor="#C0C0C0">Used For</th>
+                        </tr>
+                        <tr>
+                            <td>15 PAX Van (10+)</td>
+                            <td><input type="text" name="paxquantity"></td>
+                            <td><input type="text" name="paxdates"></td>
+                            <td><input type="text" name="paxusedfor"></td>
+                        </tr>
+                        <tr>
+                            <td>Small Bus( PAX)</td>
+                            <td><input type="text" name="smallbusquantity"></td>
+                            <td><input type="text" name="smallbusdates"></td>
+                            <td><input type="text" name="smallbususedfor"></td>
+                        </tr>
+                        <tr>
+                            <td>Large Bus( PAX)</td>
+                            <td><input type="text" name="largebusquantity"></td>
+                            <td><input type="text" name="largebusdates"></td>
+                            <td><input type="text" name="largebususedfor"></td>
+                        </tr>
+                        <tr>
+                            <td>Heavy Equipment</td>
+                            <td><input type="text" name="heavyequipmentquantity"></td>
+                            <td><input type="text" name="heavyequipmentdates"></td>
+                            <td><input type="text" name="heavyequipmentusedfor"></td>
+                        </tr>
+                        <tr>
+                            <th bgcolor="#C0C0C0" colspan="4">Portable Toilets</th>
+                        </tr>
+                        <tr>
+                            <td># of Units Requested</td>
+                            <td>Location of Units <br>(Location must be approved by 36 OSS/OSAM)</td>
+                            <td># Cleanings per Week</td>
+                            <td>Duration</td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="portabletoiletsquantity"></td>
+                            <td><input type="text" name="portabletoiletslocation"></td>
+                            <td><input type="text" name="portabletoiletscleanings"></td>
+                            <td><input type="text" name="portabletoiletsduration"></td>
+                        </tr>
+                    </table>
+
+                    <div>
+                        <button type="button" class="prev-button" data-target="step23-content">Previous</button>
+                        <button type="button" class="next-button" data-target="step25-content">Save &amp; Continue</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="step25-content" class="content-div">
+                <div class="reference-number">
+                    Your Reference Number: <span></span>
+                </div>
+                <div class="form-step">
+                    <h1>Portable Office Space (aka "trailers" or "tension fabric shelters")</h1>
+                    <p>
+                        <strong><u>Portable Office Space:</u></strong> Requirements (aka “trailers” or “tension fabric
+                        shelters”) must be <strong>submitted no later than 90 days prior to the date they will be
+                            required (with certified funding).</strong> Coordinate with 36 CES process a Temporary
+                        Airfield Construction Waiver for any portable office space being delivered on the airfiled (Mr.
+                        Jun Abaya, 36 CES/CECB, 366-2075/1023). Funding must be submitted <strong>NLT 90 days prior to
+                            the date they will be required. </strong>Provide statement of work and send with the MIPR to
+                        the 36 CONS. Please consider all 36 Wg support installation lead time
+                        (NIPR/SIPR/Telecoms/Commercial Internet/Base infrastructure power tie-in) with your delivery
+                        dates.
+                    </p>
+                    <table>
+                        <tr>
+                            <th># of Units Requested <br>(include single or double wide) </th>
+                            <th>Location of Units <br>(Location must be approved by 36 OSS/OSAM)</th>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="unitrequested"></td>
+                            <td><input type="text" name="locationofunits"></td>
+                        </tr>
+                        <tr>
+                            <th colspan="2">If CES cannot support (see below): contract generators (specify quantity,
+                                kW, etc):</th>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><input type="text" name="contractgenerators"></td>
+                        </tr>
+                        <tr>
+                            <th colspan="2">Specify all MOW requirements (Air Conditioning, DSN/NIPR drops, power
+                                outlets, etc) below:</th>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><input type="text" name="mowrequirements"></td>
+                        </tr>
+                        <tr>
+                            <th colspan="2">Identify any other contracting requirements (including quantities):</th>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><input type="text" name="contractingrequirements"></td>
+                        </tr>
+                        <tr>
+                            <th colspan="2"><Strong><u>Identify your Unit Direct Fund Cite/Line of
+                                        Accounting/DoDAAC:</u></Strong></th>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><input type="text" name="unitdirectfundcite"></td>
+                        </tr>
+                    </table>
+                    <div>
+                        <button type="button" class="prev-button" data-target="step24-content">Previous</button>
+                        <button type="button" class="next-button" data-target="step26-content">Save &amp;
+                            Continue</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="step26-content" class="content-div">
+                <div class="reference-number">
+                    Your Reference Number: <span></span>
+                </div>
+                <div class="form-step">
+                    <h1>CIVIL ENGINEERING REQUIREMENTS</h1>
+                    <p><strong><u>Facility Maintenance, Wate Disposal, & Crash/Fire Support</u></strong> 36 CES/CEOE
+                        (366-4196, Bldg 18001) will provide routine and emergency maintenance to all buildings occupied
+                        by your unit.
+                        However, funding for new requirements, such as power hook up to trailers, will be charged to the
+                        requesting unit. The unit must submit a funding document (DD Form 448 MIPR) to Naval Facilities
+                        Engineering Command (NAVFAC) Marianas. (See Financial Requirements section.) Please
+                        <strong>ensure disposal of trash and hazardous materials/waste</strong> is properly planned and
+                        executed. A MIPR to NAVFAC Marianas is also required for units requesting hazardous waste
+                        support. (See Financial Requirements section.) <strong>Dumpsters </strong>can be coordinated
+                        directly with 36 CES by calling Gerald Smith at 366-5524 upon arrival for placement and
+                        servicing arrangements; be sure to have the appropriate funding document in place in order to
+                        make these arrangements (See Financial Requirements section). Finally, if the use of Northwest
+                        Field or Andersen South is required, please identify if you want <strong>Crash/Fire
+                            Rescue</strong> support.
+                    </p>
+
+                    <table class="basic">
+                        <tr>
+                            <th rowspan="3"><u>Fire Bottles (QTY)</u></th>
+                            <th colspan="2"><u>Dumpsters (QTY)</u></th>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><input type="text" name="dumpsters"></td>
+                        </tr>
+                        <tr>
+                            <th>Location</th>
+                            <th># of Personnel</th>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="firebottles"></td>
+                            <td><input type="text" name="location"></td>
+                            <td><input type="text" name="personnel"></td>
+                        </tr>
+                        <tr>
+                            <th>Generator Support Required for MOW<br>Yes / No ( ) – How many are required:</th>
+                            <td colspan="2"><input type="text" name="generator"></td>
+                        </tr>
+                    </table>
+                    <p>
+                        <strong>Hazardous Waste Accumulation/Disposal:</strong> LMS Hazardous Waste Operations provides
+                        support for hazardous waste accumulation and disposal, used oil recycling, and battery/scrap
+                        metal recycling. Once funding is established with NAVFACMAR, Contact LMS Hazardous Waste
+                        Operations at (671) 339-2422/2419. Copies of current hazardous waste training certificates for
+                        the personnel managing the hazardous waste accumulation site must be provided, otherwise
+                        training will be required. (See the NLT 30 Days Prior to Arrival section.)</p>
+                    <h2>Provides types and quantities of waste to be generated</h2>
+                    <table>
+                        <tr>
+                            <th>Will you be generating hazardous waste/used oil?</th>
+                            <th>YES/NO</th>
+                            <td><input type="text" name="hazardouswaste"></td>
+                        </tr>
+                    </table>
+                    <p>Provide a list of waste streams and estimated quantities. Provide documentation on waste
+                    characterization for waste stream(s) identified. Forward types and quantities of waste to be
+                    generated to 36 CES/CEV Hazardous Waste Program Manager and Alternates. (See NLT 30 Days Prior to
+                    Arrival section.)</p>
+                    <table>
+                        <tr>
+                            <th>Waste Stream</th>
+                            <th>Estimated Quantity</th>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="wastestream"></td>
+                            <td><input type="text" name="estimatedquantity"></td>
+                        </tr>
+                    </table>
+                    <div>
+                        <button type="button" class="prev-button" data-target="step25-content">Previous</button>
+                        <button type="button" class="next-button" data-target="step27-content">Save &amp; Continue</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="step27-content" class="content-div">
+                <div class="reference-number">
+                    Your Reference Number: <span></span>
+                </div>
+                <div class="form-step">
+                    <h1>SUPPLY REQUIREMENTS</h1>
+                    <p>
+                        <strong><u>Supply Details: </u></strong>AAFB's Contract Supply function (366-3871/4163/3112,
+                        Bldg 18002) is very limited. Please ensure all necessary items/equipment for independent supply
+                        support accompany your unit. Non- Air Force units may need to establish a supply account (see
+                        Finance Section and attachment).<br>
+                        <strong><u>Hazardous Material Storage: </u></strong>All units must contact 36 LRS/Invicta
+                        Defense/LGRMSH at (366- 4771/4818/5336) or email: <a
+                            href="malito:robert.sampayan.ctr@us.af.mil">robert.sampayan.ctr@us.af.mil</a>, <a
+                            href="malito:patricia.san_nicolas.2.ctr@us.af.mil">patricia.san_nicolas.2.ctr@us.af.mil</a>
+                        at least 30 days prior to deployment. Units are required to provide HAZMART a copy of their home
+                        base Authorized User Listing (AUL) from EESOH-MIS, or a listing of hazardous material authorized
+                        for use at your home base. The listing should include at a minimum: Stock Number, part number,
+                        unit of issue, quantity, manufacture, SDS serial number (located on the SDS), and justification
+                        for material. This will allow sufficient time for the Bioenvironmental Engineering (BEE),
+                        Environmental Engineer, and Wing Safety to completely review the listing and provide
+                        authorization before deployment. Units are required to arrive on station with copies of all
+                        Safety Data Sheets (SDS) for material that will be used during the deployment. After arriving at
+                        Andersen AFB units may use any hazardous material that was previously authorized by Andersen AFB
+                        HAZMART. If units deploy with hazardous material they are required to track and report that
+                        material brought from home station on the Deployed Unit HAZMAT Usage Report which will be
+                        provided to the units by Andersen AFB HAZMART. Units will also fill out a HAZMAT Pharmacy
+                        Program Representative Letter (HPPRL) for their hazardous material POCs (Note: Andersen AFB
+                        HAZMART will not issue any hazardous material until this letter is on file). Units will request
+                        re-supply/initial issue by using the AF Form 2005 (Note: only personnel on the HPPRL will have
+                        authority to request hazardous material). Bar codes will be issued for all hazardous material
+                        issued out by Andersen AFB HAZMART; units are required to clear all bar codes prior to unit’s
+                        departure. The departing unit’s HAZMAT point of contact will coordinate with Andersen AFB
+                        HAZMART to ensure all bar codes are cleared. Units are reasonable to ensure disposal of
+                        hazardous materials/waste is properly planned and executed prior to departure. The generation of
+                        waste should be avoided or minimized wherever possible. Disposal of products should at all times
+                        comply with Air Force and Navy policies, and local and US EPA regulations. Andersen AFB HAZMART
+                        will accept hazardous materials turn-ins as long as the materials meet established turn-in
+                        requirements. (Note: UNITS WILL NOT LEAVE ANY HOME STATION HAZARDOUS MATERIAL ON ANDERSEN AFB,
+                        any unused material brought from home station must be brought back with the unit to their home
+                        station) HAZMAT POC: 366-4771/4818/5336
+                    </p>
+                    <table>
+                        <tr>
+                            <th bgcolor="#C0C0C0">Supply Support Request:</th>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="supplysupportrequest"></td>
+                        </tr>
+                    </table>
+                    <div>
+                        <button type="button" class="prev-button" data-target="step26-content">Previous</button>
+                        <button type="button" class="next-button" data-target="step28-content">Save &amp; Continue</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="step28-content" class="content-div">
+                <div class="reference-number">
+                    Your Reference Number: <span></span>
+                </div>
+                <div class="form-step">
+                    <h1>POL REQUIREMENTS</h1>
+                    <p>
+                        <strong><u>Fuel Resupply (JP8 ONLY):</u></strong>Aircrews will be required to provide either the
+                        DD Form 1896 or U.S. Government Air Card prior to receiving fuel prior to each refuel. If the
+                        aircrew does not have the card for the aircraft that is to be refueled, they will not receive
+                        fuel until the correct card it provided. This requirement applies to DoD, Commercial, and
+                        Foreign aircraft. Commercial and Foreign Letter of Agreement will be verified with DLA-E by
+                        Fuels Support Center personnel prior to fuel issue. Customers authorized credit fuel will not be
+                        authorized cash sales.<br>
+
+                        <strong><u>Generator Support:</u></strong>Generators will be positioned no more than 35 feet
+                        from paved road/surface so refueling unit does not have to drive on grass and can access site
+                        for refueling. Refuelers will not be driven on grass. Site must be coordinated prior to
+                        placement of generator with POL, contact
+                        366-5283/5267. <br>
+
+                        <strong><u>VIL Keys:</u></strong> See Transportation Requirements section for details. <br>
+
+                        <strong><u>Diesel (DS2) Support:</u></strong> 36 LRS POL can support diesel requirements for
+                        equipment across AAFB. Billing information must be provided prior to filling and equipment. For
+                        details, contact the 36 LRS/LGRF (366-6291). <br>
+
+                        <strong><u>POL guidance for self-sufficient units:</u></strong> When a unit plans to perform
+                        refueling operations with POL refueling equipment they must adhere to the following: First, POL
+                        will verify their credentials, i.e. GOV license, training etc. upon arrival; members need to be
+                        certified on in place equipment prior to arrival. Secondly, POL will provide flight-line
+                        orientation training and familiarization with AAFB equipment, prior to unit being sent on
+                        operations of their own.<br>
+
+                        <strong><u>Hot Pit Operations:</u></strong>If a unit plans to perform Hot-Pit operations with
+                        POL refueling equipment, those personnel, regardless of branch of service or country, need to be
+                        certified on the equipment in place
+                        equipment at Andersen AFB, and on the airframe(s) they'll be performing Hot-Pit operations on
+                        prior to arrival. AAFB POL personnel will not perform Hot Pit Operations.<br>
+
+                        <strong><u>Cryogenic Support:</u></strong>Due to varying demand, forecasting LOX/LIN requirement
+                        is very important to AAFB POL.LOX/LIN Please state the type and approximate amount of LOX/LIN
+                        required to meet your total mission needs. Units will be billed for LOX and LIN through the Base
+                        Supply System (see supply and finance sections). <br>
+
+                        <strong><u>Liquid Oxygen/Liquid Nitrogen (LOX/LIN):</u></strong> Due to varying demand,
+                        forecasting LOX and LIN requirements is very important to AAFB POL. Please state the type and
+                        approximate amount of LOX/LIN required to meet your total mission needs. See Contracting Section
+                        to establish MIPR requirements. <br>
+
+                        <strong><u>Gaseous Oxygen & Nitrogen:</u></strong> We do not issue cylinders. To only fill 10
+                        cylinders at a time.
+                    </p>
+                    <div>
+                        <button type="button" class="prev-button" data-target="step27-content">Previous</button>
+                        <button type="button" class="next-button" data-target="step29-content">Save &amp; Continue</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="step29-content" class="content-div">
+                <div class="reference-number">
+                    Your Reference Number: <span></span>
+                </div>
+                <div class="form-step">
+                    <h1>POL REQUIREMENTS</h1>
+                    <table class="basic">
+                        <tr>
+                            <th rowspan="2"><strong>How much and what type of POL products will be required? (in
+                                    gallons)</strong></th>
+                            <th>JP-8</th>
+                            <th>MOGAS/DS2</th>
+                            <th>LOX/LIN</th>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="jp8gallons"></td>
+                            <td><input type="text" name="mogasgallons"></td>
+                            <td><input type="text" name="loxgallons"></td>
+                        </tr>
+                    </table>
+                    <h4>Provide a brief flying schedule of a typical day during your time at Andersen AFB. It is very
+                        important to forecast requirements especially on weekends to ensure personnel are on shift to
+                        support.</h4>
+                    <table class="basic">
+                        <tr>
+                            <th>Day</th>
+                            <th>Mon</th>
+                            <th>Tue</th>
+                            <th>Wed</th>
+                            <th>Thu</th>
+                            <th>Fri</th>
+                            <th>Sat</th>
+                            <th>Sun</th>
+                        </tr>
+                        <tr>
+                            <th># Sorties</th>
+                            <td><input type="text" name="mondaysorties"></td>
+                            <td><input type="text" name="tuesdaysorties"></td>
+                            <td><input type="text" name="wednesdaysorties"></td>
+                            <td><input type="text" name="thursdaysorties"></td>
+                            <td><input type="text" name="fridaysorties"></td>
+                            <td><input type="text" name="saturdaysorties"></td>
+                            <td><input type="text" name="sundaysorties"></td>
+                        </tr>
+                        <tr>
+                            <th># Fuel Req</th>
+                            <td><input type="text" name="mondayfuel"></td>
+                            <td><input type="text" name="tuesdayfuel"></td>
+                            <td><input type="text" name="wednesdayfuel"></td>
+                            <td><input type="text" name="thursdayfuel"></td>
+                            <td><input type="text" name="fridayfuel"></td>
+                            <td><input type="text" name="saturdayfuel"></td>
+                            <td><input type="text" name="sundayfuel"></td>
+                        </tr>
+                        <tr>
+                            <th>LOX/LIN Req</th>
+                            <td><input type="text" name="mondaylox"></td>
+                            <td><input type="text" name="tuesdaylox"></td>
+                            <td><input type="text" name="wednesdaylox"></td>
+                            <td><input type="text" name="thursdaylox"></td>
+                            <td><input type="text" name="fridaylox"></td>
+                            <td><input type="text" name="saturdaylox"></td>
+                            <td><input type="text" name="sundaylox"></td>
+                        </tr>
+                    </table>
+                    <div>
+                        <button type="button" class="prev-button" data-target="step28-content">Previous</button>
+                        <button type="button" class="next-button" data-target="step30-content">Save &amp; Continue</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="step30-content" class="content-div">
+                <div class="reference-number">
+                    Your Reference Number: <span></span>
+                </div>
+                <div class="form-step">
+                    <h1>MEDICAL REQUIREMENTS</h1>
+                    <p>
+                        36 MDG will schedule same-day appointments for acute conditions. Call 366-9355 (WELL) (0700-1600
+                        hrs) or 911 (after hours). Please coordinate with your deployed medical team first (if
+                        applicable).<br>
+                        36 MDG is closed every 2nd Thursday for training and Flight Medicine Clinic is closed every
+                        Wednesday from 1300-1700 for training.<br>
+                        <strong>*Andersen does not have an ER, however, ambulance service is available to transport to
+                            nearest ER*</strong>
+                    </p>
+                    <table>
+                        <tr>
+                            <th>Is your unit bringing medical staff? If so, please list the type of medical support
+                                staff:</th>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="medicalstaff"></td>
+                        </tr>
+                        <tr>
+                            <th>Do you require medical support? If so, please list type of medical support you will
+                                require:</th>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="medicalsupport"></td>
+                        </tr>
+                    </table>
+                    <div>
+                        <button type="button" class="prev-button" data-target="step29-content">Previous</button>
+                        <button type="button" class="next-button" data-target="step31-content">Save &amp; Continue</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="step31-content" class="content-div">
+                <div class="reference-number">
+                    Your Reference Number: <span></span>
+                </div>
+                <div class="form-step">
+                    <h1>AUGMENTATION REQUIREMENTS</h1>
+                    <table id="basic">
+                        <tr bgcolor="#C0C0C0">
+                            <th>Function</th>
+                            <th colspan="2">Planning Factor</th>
+                            <th>Number of Augmentees</th>
+                        </tr>
+                        <tr>
+                            <th>Fuel</th>
+                            <th colspan="2">Based on # of sorties, fuel rqmts, timing, etc.</th>
+                            <td><input type="text" name="numfuel"></td>
+                        </tr>
+                        <tr>
+                            <th>Food Service</th>
+                            <th colspan="2">1 person per 100 personnel using the dining facility (per meal period)</th>
+                            <td><input type="text" name="numfoodservice"></td>
+                        </tr>
+                        <tr>
+                            <th>Maintenance</th>
+                            <th colspan="2">Sufficient to meet unit requirements</th>
+                            <td><input type="text" name="nummaintenance"></td>
+                        </tr>
+                        <tr>
+                            <th>Munitions</th>
+                            <th colspan="2">Sufficient to meet unit requirements</th>
+                            <td><input type="text" name="nummunitions"></td>
+                        </tr>
+                        <tr>
+                            <th>Security Forces</th>
+                            <th colspan="2">6 augmentees per PL2 asset</th>
+                            <td><input type="text" name="numsecurity"></td>
+                        </tr>
+                        <tr>
+                            <th>Weather</th>
+                            <th colspan="2">Based on # of aircraft, # of sorties, etc</th>
+                            <td><input type="text" name="numweather"></td>
+                        </tr>
+                        <tr>
+                            <th>Medical</th>
+                            <th colspan="2">If coming with >100 personnel please bring adequate medical support. i.e
+                                flight surgeon, IDMT. If coming with >200 bring flight surgeon and medical technician.
+                                The 36th Medical Group (MDG) should have available work space, computers, and patient
+                                exam rooms for providers.<br>
+                                Medical personnel need to contact 36 MDG's Credentialing Manager at (671)-366-6537, when
+                                notified of deployment to Andersen. Privileged providers will work out of the 36 MDG,
+                                Andersen AFB; however, 36 MDG has limited workspace space for allied medical providers
+                                and require a Memorandum of Understanding or Agreement.</th>
+                            <td><input type="text" name="nummedical"></td>
+                        </tr>
+                    </table>
+                    <div>
+                        <button type="button" class="prev-button" data-target="step30-content">Previous</button>
+                        <button type="button" class="next-button" data-target="step32-content">Save &amp; Continue</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="step32-content" class="content-div">
+                <div class="reference-number">
+                    Your Reference Number: <span></span>
+                </div>
+                <div class="form-step">
+                    <h1>TRAINING SITE REQUEST</h1>
+                    <table>
+                        <tr>
+                            <th>Dates:</th>
+                            <td><input type="text" name="dates"></td>
+                            <th>Andy South Request Dates:</th>
+                            <td><input type="text" name="andysouthrequestdates"></td>
+                        </tr>
+                    </table>
+                    <p>
+                        For use of explosives at the AAFB training sites, please complete the attached <strong>risk
+                            assessment and explosives listing.</strong> These files will require 36 WG/CC approval prior
+                        to your unit's use of the area.<br>
+                        The Rules of Engagement for AAFB training areas must be completed and signed.<br>
+                        A Special Use Airspace Request form is required if performing air operations at NWF or Andy
+                        South.Flying units must review LZ/DZ surveys at <a
+                            href="https://private.amc.af.mil/a3/a39/zar/zarweb.html">https://private.amc.af.mil/a3/a39/zar/zarweb.html</a>
+                        and contact Base Operations (366-4188) and FAA/CERAP (366-6286) for permission.
+                    </p>
+                    <h1>FLIGHT LINE PHOTO</h1>
+                    <p>
+                        Persons requesting permission to take photos and/or video on the flightline MUST have flightline
+                        photo authorization coordinated BEFORE planning to take any imagery or video on the flightline.
+                        An Entry Authorization Letter (EAL) must accompany this request, and persons requesting
+                        flightline photo access must already be present on this letter. PLEASE NOTE: This letter DOES
+                        NOT clear media and/or non- military personnel without specific coordination and approval
+                        through the 36 OSS/CSS. For questions please contact DSN: 315-366-1008 and speak to Mr. Rene
+                        Penaranda. Letters take anywhere from 48-96 hours to process and should be coordinated in
+                        advance to ensure ability to gather imagery. Please use the template provided and submit to <a
+                            href="36OSS.CSS@us.af.mil">36OSS.CSS@us.af.mil</a> or <a
+                            href="rene.penaranda@us.af.mil">rene.penaranda@us.af.mil</a>. Flightline photo letters will
+                        accompany the EAL and will be routed through 36th Operations Support Squadron and 36th
+                        Operations
+                    </p>
+                    <div>
+                        <button type="button" class="prev-button" data-target="step31-content">Previous</button>
+                        <button type="button" class="next-button" data-target="step33-content">Save &amp; Continue</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="step33-content" class="content-div">
+                <div class="reference-number">
+                    Your Reference Number: <span></span>
+                </div>
+                <div class="form-step">
+                    <h1>REDEPLOYMENT REQUIREMENTS</h1>
+                    <p>
+                        Contact LGRDX upon arrival. Turn in electronic files, passenger manifests, load plans, shipper’s
+                        declaration of dangerous goods, and provide a point of contact list/phone/e-mail listing. LGRDX
+                        is your point of contact for all redeployment operations. To ensure a safe and timely
+                        redeployment we use standard deployment procedures IAW DoD4500.9R Part III and AFI 10-403. This
+                        includes the use of automated procedures to support GTN and ITV. Deploying units need to provide
+                        their own HAZDEC certifiers when deploying with HAZARDS. The unit will provide all electronic
+                        CMOS/GATES, Cargo/Passenger, manifests for ITV purposes. Unit is responsible for their own 463L
+                        pallets, nets, and dunnage. Unit must also bring Hazardous Cargo Declaration Certifiers. <br>
+                        <strong>PERSCO Out-Processing: </strong>All redeploying personnel (regardless of branch of
+                        service or country) must out-process with PERSCO by completing an out-processing checklist and
+                        provide flight itinerary/information NLT 1 duty day prior to departure.
+                        Contact Information:<br>
+                        NIPRET Email: 36fss.persco@us.af.mil<br>
+                        PERSCO Phone: DSN: 315-366-5195/3152 or Cell: 671-688-2942<br>
+                        Location: Building 22026, Room 155<br>
+                        Prior to departing, close-out turn-in, clean-up and/or fuel the following items (as required):
+                    </p>
+                    <table>
+                        <tr>
+                            <th>MHE, GOVs, & Rentals</th>
+                            <th>Lodging Facilities</th>
+                            <th>WRM Assets</th>
+                            <th>Hazardous Materials</th>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="mhe"></td>
+                            <td><input type="text" name="lodging"></td>
+                            <td><input type="text" name="wrm"></td>
+                            <td><input type="text" name="hazardous"></td>
+                        </tr>
+                        <tr>
+                            <th>Supply Accounts</th>
+                            <th>MUNS Accounts</th>
+                            <th colspan="2">Communications Equip</th>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="supply"></td>
+                            <td><input type="text" name="muns"></td>
+                            <td colspan="2"><input type="text" name="communications"></td>
+                        </tr>
+                    </table>
+                    <div>
+                        <button type="button" class="prev-button" data-target="step32-content">Previous</button>
+                        <button type="button" class="next-button" data-target="step34-content">Save &amp; Continue</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="step34-content" class="content-div">
+                <div class="reference-number">
+                    Your Reference Number: <span></span>
+                </div>
+                <div class="form-step">
+                    <h1>POINT OF CONTACTS</h1>
+                    <h3>For any questions please refer to the following</h3>
+                    <table id="basic">
+                        <tr>
+                            <th colspan="2" bgcolor="#C0C0C0">POINTS OF CONTACT </th>
+                        </tr>
+                        <tr>
+                            <th colspan="2">LGRDX is the installation focal point for all reception requests. Functional
+                                experts may contact their counterparts with technical questions, but only requests
+                                received from the designated POCs via the reception checklist will be considered.</th>
+                        </tr>
+                        <tr>
+                            <th colspan="2">Andersen AFB DSN: 315-36X-XXXX; Commercial: 1-671-36X-XXXX; Information:
+                                366-1110</th>
+                        </tr>
+                        <tr>
+                            <th>Installation Reception Office (36 LRS) <br>362-5236/366-4519</th>
+                            <th>Operations Plans (36 OSS) <br>366-4393</th>
+                        </tr>
+                        <tr>
+                            <th>Base Operations (36 OSS) <br>366-4188/1010</th>
+                            <th>Lodging (36 FSS) <br>362-5501</th>
+                        </tr>
+                        <tr>
+                            <th>Comm Help Desk (36 CS) <br>362-2703</th>
+                            <th>Command Post (36 WG/CP) <br>366-2981</th>
+                        </tr>
+                        <tr>
+                            <th>Dining Facility (36 FSS) <br>366-5152</th>
+                            <th>Flight Kitchen (36 FSS) <br>366-5201</th>
+                        </tr>
+                        <tr>
+                            <th>Air Terminal Operations Center (734 AMS) <br>366-6055/3125</th>
+                            <th>Fuel (36 LRS) <br>366-6291</th>
+                        </tr>
+                        <tr>
+                            <th>Security (36 SFS) <br>366-2910</th>
+                            <th>Visitor Center (36 SFS) <br>366-5650</th>
+                        </tr>
+                        <tr>
+                            <th>Transportation (36 LRS) <br>366-2239</th>
+                            <th>Contracting (36 CONS) <br>366-2192</th>
+                        </tr>
+                        <tr>
+                            <th>Maintenance (36 MXS) <br>366-1435/6121</th>
+                            <th>Munitions (36 MUNS) <br>366-6393</th>
+                        </tr>
+                        <tr>
+                            <th>Civil Engineering (36 CES) <br>366-2916</th>
+                            <th>Hazardous Waste Operations <br>366-6019/1850/1851</th>
+                        </tr>
+                        <tr>
+                            <th>Guam Customs <br>366-3212</th>
+                            <th>Weather (36 OSS) <br>366-5230</th>
+                        </tr>
+                        <tr>
+                            <th>Medical Clinic (36 MDG) <br>366-9355</th>
+                            <th>Emergency – 911 <br>American Red Cross – 366-6270</th>
+                        </tr>
+                        <tr>
+                            <th>Northwest Field (36 CRG) <br>366-2128</th>
+                            <th>Financial Planning (36 LRS) <br>366-4602</th>
+                        </tr>
+                        <tr>
+                            <th>Foreign Funding/ACSA (36 LRS) <br>366-6583</th>
+                            <th>Foreign Visitor POC (36 WG/IP) <br>366-5108</th>
+                        </tr>
+                        <tr>
+                            <th>Safety (36 WG) <br>366-7233</th>
+                            <th>Fire Department (36 CES/CEF) <br>366-5284</th>
+                        </tr>
+                    </table>
+
+                    <div>
+                        <button type="button" class="prev-button" data-target="step33-content">Previous</button>
+                        <button type="button" class="next-button" data-target="step35-content">Save &amp; Continue</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Step 35 -->
+            <div id="step35-content" class="content-div">
+                <div class="reference-number">
+                    Your Reference Number: <span></span>
+                </div>
+                <div class="form-step">
+                    <h1>Finalize</h1>
+                    <p>Once you have verified that all steps are correctly answered and formatted, please click the submit button below. This will send your eARC directly to:
+                        <span style="background-color: #fff9c4; padding: 2px 5px; display: inline;">36wg.idrc@us.af.mil</span>.
+                    </p>
+                    <label class="submission-label"  for="orgMailbox">Please enter your email for confirmation copy:</label>
+                    <input type="email" id="orgMailbox" name="orgMailbox" required
+                        placeholder="Enter Email">
+                    <div class="button-group">
+                        <button class="prev-button" type="button" data-target="step34-content">Previous</button>
+                        <button class="next-button" type="button" data-target="step36-content">Submit</button>
+                    </div>
+                </div>
+            </div>
+            <div id="step36-content" class="content-div" style="display: none;">
+                <div class="sub-content" style="text-align: center;">
+                    <h1>SUBMISSOIN CONFIRMED</h1>
+                    <p id="confirmation-message">Your eARC has been successfully submitted <span id="datetime-span"></span> to <span style="background-color: #fff9c4; padding: 2px 5px;">36wg.idrc@us.af.mil</span>.</p>
+                    <div class="reference-number">
+                        Please hold on to your reference number: <span></span>
+                    </div>
+                    <!-- Add any additional confirmation details here -->
+                </div>
+            </div>
+    </div>
+
+</body>
+
+</html>
