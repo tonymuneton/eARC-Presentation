@@ -2,6 +2,10 @@
 
 @import url(https://db.onlinewebfonts.com/c/e15e04d5b8ea210a0a98596732a32871?family=Futura-Normal);
 @import url(https://db.onlinewebfonts.com/c/04bb3f9a7e8470f6e50a49b64000770d?family=Futura+Windows);
+@font-face {
+  font-family: "Futura Boldl";
+  src: url("font/Futura Bold.otf") format("truetype");
+}
 
 @font-face {
     font-family: "Futura Bold";
